@@ -5,4 +5,13 @@ Alguns projetos que fiz até agora e resolvi torná-los públicos. Até agora, s
   Os projetos da linguagem C# necessitam ser compilados. Uma parte deles usa .NET versão 4.7.2, por isso, use essa versão para compilá-los. Aqueles projetos com a terminação "8"    em seu nome usam .NET versão 8.0.302, então fique atento quanto a versão do .NET SDK.
   
   # c#compilado
-  Aqui está o resultado da compilação de alguns projetos C# (.exe) que podem ser executados sem necessidade de compilação.
+  Resultados da compilação de alguns projetos C# (.exe) que podem ser executados sem necessidade de compilação.
+
+  # c++
+  Projetos utilizando a linguagem C++.
+
+  # js
+  Projetos utilizando a linguagem JavaScript.
+  
+  # portugol
+  Projetos utilizando a linguagem de alto nível Portugol.
