@@ -10,7 +10,7 @@ Alguns projetos que fiz até agora e resolvi torná-los públicos. Até agora, s
   ## [c++](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main/c%2B%2B)
   Projetos utilizando a linguagem C++.
 
-  ## [js]()
+  ## [js](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main/js)
   Projetos utilizando a linguagem JavaScript.
   
   ## [portugol](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main/portugol)
