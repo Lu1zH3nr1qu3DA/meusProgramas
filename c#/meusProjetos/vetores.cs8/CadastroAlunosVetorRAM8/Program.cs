@@ -11,6 +11,7 @@
         static int[] idade = new int[nAlunos];
         static int posUltimoAluno = 0;
         static int posInserirAluno = 0;
+        static bool nenhumAluno = true;
         static string resposta = "";
 
         static void Inserir()
@@ -28,6 +29,8 @@
             cidade[posInserirAluno] = Console.ReadLine()!;
             Console.Write($"Insira o CPF de {aluno[posInserirAluno]} (apenas números): ");
             cpf[posInserirAluno] = Convert.ToInt64(Console.ReadLine());
+
+            nenhumAluno = false;
         }
 
         static void Main(string[] args)
@@ -49,7 +52,7 @@
                 switch (resposta)
                 {
                     case "1":
-                        if (aluno[0] == null)
+                        if (nenhumAluno == true)
                         {
                             Console.Clear();
                             Console.WriteLine("Nenhum aluno foi inserido.");
@@ -84,21 +87,32 @@
                         Console.Write("Insira o número do aluno que deseja Alterar: ");
                         resposta = Console.ReadLine()!;
                         int alterar = Convert.ToInt32(resposta) - 1;
-                        posInserirAluno = alterar;
-                        Inserir();
-                        posInserirAluno = posUltimoAluno;
+                        if (aluno[alterar] == null)
+                        {
+                            Console.WriteLine("\nErro: O aluno informado não existe.");
+                        }
+                        else
+                        {
+                            posInserirAluno = alterar;
+                            Inserir();
+                            posInserirAluno = posUltimoAluno;
+                        }
                         break;
                     case "4":
                         Console.Clear();
                         Console.Write("Insira o número do aluno que quer Excluir: ");
                         resposta = Console.ReadLine()!;
                         int excluir = Convert.ToInt32(resposta) - 1;
+                        if (aluno[excluir] == null)
+                        {
+                            Console.WriteLine("\nErro: O aluno informado não existe.");
+                        }
                         aluno[excluir] = null!;
                         break;
                     case "5":
                         break;
                     default:
-                        Console.WriteLine("Erro: A opção inserida não existe.");
+                        Console.WriteLine("\nErro: A opção inserida não existe.");
                         break;
                 }
                 Console.Write("\n\n\nPressione qualquer tecla para continuar. . . ");

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CadastroAlunosVetorRAM8")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86c604878b117c6e3449ff6f94075c04278e6169")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a33546cd801f40507860f7cfc569270eec82850c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CadastroAlunosVetorRAM8")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CadastroAlunosVetorRAM8")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
