@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luizh\\Documents\\GitHub\\programas\\c#\\vetores.cs8\\CadastroAlunosVetorRAM8\\CadastroAlunosVetorRAM8.csproj": {}
+    "C:\\Users\\luizh\\Documents\\GitHub\\meusProgramas\\c#\\vetores.cs8\\CadastroAlunosVetorRAM8\\CadastroAlunosVetorRAM8.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luizh\\Documents\\GitHub\\programas\\c#\\vetores.cs8\\CadastroAlunosVetorRAM8\\CadastroAlunosVetorRAM8.csproj": {
+    "C:\\Users\\luizh\\Documents\\GitHub\\meusProgramas\\c#\\vetores.cs8\\CadastroAlunosVetorRAM8\\CadastroAlunosVetorRAM8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luizh\\Documents\\GitHub\\programas\\c#\\vetores.cs8\\CadastroAlunosVetorRAM8\\CadastroAlunosVetorRAM8.csproj",
+        "projectUniqueName": "C:\\Users\\luizh\\Documents\\GitHub\\meusProgramas\\c#\\vetores.cs8\\CadastroAlunosVetorRAM8\\CadastroAlunosVetorRAM8.csproj",
         "projectName": "CadastroAlunosVetorRAM8",
-        "projectPath": "C:\\Users\\luizh\\Documents\\GitHub\\programas\\c#\\vetores.cs8\\CadastroAlunosVetorRAM8\\CadastroAlunosVetorRAM8.csproj",
+        "projectPath": "C:\\Users\\luizh\\Documents\\GitHub\\meusProgramas\\c#\\vetores.cs8\\CadastroAlunosVetorRAM8\\CadastroAlunosVetorRAM8.csproj",
         "packagesPath": "C:\\Users\\luizh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luizh\\Documents\\GitHub\\programas\\c#\\vetores.cs8\\CadastroAlunosVetorRAM8\\obj\\",
+        "outputPath": "C:\\Users\\luizh\\Documents\\GitHub\\meusProgramas\\c#\\vetores.cs8\\CadastroAlunosVetorRAM8\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luizh\\AppData\\Roaming\\NuGet\\NuGet.Config"
