@@ -12,4 +12,3 @@ function draw() {
     rect(mouseX, mouseY, 100, 200);
   }
 }
-
