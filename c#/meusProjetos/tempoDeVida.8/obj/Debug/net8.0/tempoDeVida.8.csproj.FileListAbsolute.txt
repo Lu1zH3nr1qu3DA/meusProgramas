@@ -1,0 +1,15 @@
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\bin\Debug\net8.0\tempoDeVida.8.exe
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\bin\Debug\net8.0\tempoDeVida.8.deps.json
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\bin\Debug\net8.0\tempoDeVida.8.runtimeconfig.json
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\bin\Debug\net8.0\tempoDeVida.8.dll
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\bin\Debug\net8.0\tempoDeVida.8.pdb
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\obj\Debug\net8.0\tempoDeVida.8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\obj\Debug\net8.0\tempoDeVida.8.AssemblyInfoInputs.cache
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\obj\Debug\net8.0\tempoDeVida.8.AssemblyInfo.cs
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\obj\Debug\net8.0\tempoDeVida.8.csproj.CoreCompileInputs.cache
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\obj\Debug\net8.0\tempoDeVida.8.sourcelink.json
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\obj\Debug\net8.0\tempoDeVida.8.dll
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\obj\Debug\net8.0\refint\tempoDeVida.8.dll
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\obj\Debug\net8.0\tempoDeVida.8.pdb
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\obj\Debug\net8.0\tempoDeVida.8.genruntimeconfig.cache
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\tempoDeVida.8\obj\Debug\net8.0\ref\tempoDeVida.8.dll

@@ -1,0 +1,15 @@
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\bin\Debug\net8.0\0s1s.8.exe
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\bin\Debug\net8.0\0s1s.8.deps.json
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\bin\Debug\net8.0\0s1s.8.runtimeconfig.json
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\bin\Debug\net8.0\0s1s.8.dll
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\bin\Debug\net8.0\0s1s.8.pdb
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\obj\Debug\net8.0\0s1s.8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\obj\Debug\net8.0\0s1s.8.AssemblyInfoInputs.cache
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\obj\Debug\net8.0\0s1s.8.AssemblyInfo.cs
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\obj\Debug\net8.0\0s1s.8.csproj.CoreCompileInputs.cache
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\obj\Debug\net8.0\0s1s.8.sourcelink.json
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\obj\Debug\net8.0\0s1s.8.dll
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\obj\Debug\net8.0\refint\0s1s.8.dll
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\obj\Debug\net8.0\0s1s.8.pdb
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\obj\Debug\net8.0\0s1s.8.genruntimeconfig.cache
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\meusProjetos\0s1s.8\obj\Debug\net8.0\ref\0s1s.8.dll
