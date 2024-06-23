@@ -1,0 +1,7 @@
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\senac\vetores.cs\cadastroAlunosVetorRAM\obj\Debug\cadastroAlunosVetorRAM.csproj.AssemblyReference.cache
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\senac\vetores.cs\cadastroAlunosVetorRAM\obj\Debug\cadastroAlunosVetorRAM.csproj.CoreCompileInputs.cache
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\senac\vetores.cs\cadastroAlunosVetorRAM\bin\Debug\cadastroAlunosVetorRAM.exe.config
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\senac\vetores.cs\cadastroAlunosVetorRAM\bin\Debug\cadastroAlunosVetorRAM.exe
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\senac\vetores.cs\cadastroAlunosVetorRAM\bin\Debug\cadastroAlunosVetorRAM.pdb
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\senac\vetores.cs\cadastroAlunosVetorRAM\obj\Debug\cadastroAlunosVetorRAM.exe
+C:\Users\luizh\Documents\GitHub\meusProgramas\c#\senac\vetores.cs\cadastroAlunosVetorRAM\obj\Debug\cadastroAlunosVetorRAM.pdb

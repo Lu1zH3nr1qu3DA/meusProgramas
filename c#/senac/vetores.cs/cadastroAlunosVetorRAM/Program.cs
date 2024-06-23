@@ -24,15 +24,15 @@ namespace CadastroAlunosVetorRAM
         {
             Console.Clear();
             Console.Write($"\nInsira o nome do {posInserirAluno + 1}º Aluno: ");
-            aluno[posInserirAluno] = Console.ReadLine()!;
+            aluno[posInserirAluno] = Console.ReadLine();
             Console.Write($"Insira o email de {aluno[posInserirAluno]}: ");
-            email[posInserirAluno] = Console.ReadLine()!;
+            email[posInserirAluno] = Console.ReadLine();
             Console.Write($"Insira a idade de {aluno[posInserirAluno]}: ");
             idade[posInserirAluno] = Convert.ToInt32(Console.ReadLine());
             Console.Write($"Insira o CEP de {aluno[posInserirAluno]} (sem traço): ");
             cep[posInserirAluno] = Convert.ToInt32(Console.ReadLine());
             Console.Write($"Insira a cidade de {aluno[posInserirAluno]}: ");
-            cidade[posInserirAluno] = Console.ReadLine()!;
+            cidade[posInserirAluno] = Console.ReadLine();
             Console.Write($"Insira o CPF de {aluno[posInserirAluno]} (apenas números): ");
             cpf[posInserirAluno] = Convert.ToInt64(Console.ReadLine());
 
@@ -53,7 +53,7 @@ namespace CadastroAlunosVetorRAM
                 Console.WriteLine("(4) - Excluir um Aluno\n");
                 Console.WriteLine("(5) - Sair\n");
 
-                resposta = Console.ReadLine()!;
+                resposta = Console.ReadLine();
 
                 switch (resposta)
                 {
@@ -91,7 +91,7 @@ namespace CadastroAlunosVetorRAM
                     case "3":
                         Console.Clear();
                         Console.Write("Insira o número do aluno que deseja Alterar: ");
-                        resposta = Console.ReadLine()!;
+                        resposta = Console.ReadLine();
                         int alterar = Convert.ToInt32(resposta) - 1;
                         if (aluno[alterar] == null)
                         {
@@ -107,13 +107,13 @@ namespace CadastroAlunosVetorRAM
                     case "4":
                         Console.Clear();
                         Console.Write("Insira o número do aluno que quer Excluir: ");
-                        resposta = Console.ReadLine()!;
+                        resposta = Console.ReadLine();
                         int excluir = Convert.ToInt32(resposta) - 1;
                         if (aluno[excluir] == null)
                         {
                             Console.WriteLine("\nErro: O aluno informado não existe.");
                         }
-                        aluno[excluir] = null!;
+                        aluno[excluir] = null;
                         break;
                     case "5":
                         break;
