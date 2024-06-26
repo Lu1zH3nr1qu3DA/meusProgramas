@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO", "POO\POO.csproj", "{9E78830C-1AD1-4AA9-9CFD-E40CA502C84C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POOBoletim", "BoletimPOO\POOBoletim.csproj", "{67FA189E-28EA-4776-B3B8-0C72F19FFC4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9E78830C-1AD1-4AA9-9CFD-E40CA502C84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E78830C-1AD1-4AA9-9CFD-E40CA502C84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E78830C-1AD1-4AA9-9CFD-E40CA502C84C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67FA189E-28EA-4776-B3B8-0C72F19FFC4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67FA189E-28EA-4776-B3B8-0C72F19FFC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67FA189E-28EA-4776-B3B8-0C72F19FFC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67FA189E-28EA-4776-B3B8-0C72F19FFC4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
