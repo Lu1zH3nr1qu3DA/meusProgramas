@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO", "POO\POO.csproj", "{9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POOBoletim", "BoletimPOO\POOBoletim.csproj", "{67FA189E-28EA-4776-B3B8-0C72F19FFC4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POOFolhaPagamento", "POOFolhaPagamento\POOFolhaPagamento.csproj", "{F8427BD9-3FAD-4843-9787-207C9D260630}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{67FA189E-28EA-4776-B3B8-0C72F19FFC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67FA189E-28EA-4776-B3B8-0C72F19FFC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67FA189E-28EA-4776-B3B8-0C72F19FFC4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8427BD9-3FAD-4843-9787-207C9D260630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8427BD9-3FAD-4843-9787-207C9D260630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8427BD9-3FAD-4843-9787-207C9D260630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8427BD9-3FAD-4843-9787-207C9D260630}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
