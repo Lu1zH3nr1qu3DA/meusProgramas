@@ -34,17 +34,7 @@ namespace POOFolhaPagamento
                 {
                     case "1":
                         Funcionarios objFuncionarios = new Funcionarios();
-                        Console.Write("Insira o Nome do funcionário: ");
-                        objFuncionarios.Nome = Console.ReadLine();
-                        Console.Write($"Insira o valor do Salário de {objFuncionarios.Nome}: R$");
-                        objFuncionarios.Salario = Convert.ToDouble(Console.ReadLine());
-
-                        objFuncionarios.Inss();
-                        objFuncionarios.IR();
-                        objFuncionarios.VLiquido();
-
-                        listFuncionarios.Add(objFuncionarios);
-
+                        Inserir(ref objFuncionarios);
                         break;
                     case "2":
                         int tableWidth = 73;
@@ -92,10 +82,18 @@ namespace POOFolhaPagamento
                         }
                         break;
                     case "3":
-                    
+                        Console.Clear();
+                        Console.Write("Insira o Número do funcionário que deseja Alterar: ");
+                        resposta = Console.ReadLine();
+                        int alterar = Convert.ToInt16(resposta);
+
                         break;
                     case "4":
-                    
+                        Console.Clear();
+                        Console.Write("Insira o Número do funcionário que deseja Excluir: ");
+                        resposta = Console.ReadLine();
+                        int excluir = Convert.ToInt16(resposta);
+                        listFuncionarios.RemoveAt(excluir);
                         break;
                     case "5":
                         break;
@@ -105,6 +103,19 @@ namespace POOFolhaPagamento
                 }
                 Console.Write("\n\n\nPressione qualquer tecla para continuar. . . ");
                 Console.ReadKey();
+            }
+            void Inserir(ref Funcionarios objFuncionarios)
+            {
+                Console.Write("Insira o Nome do funcionário: ");
+                objFuncionarios.Nome = Console.ReadLine();
+                Console.Write($"Insira o valor do Salário de {objFuncionarios.Nome}: R$");
+                objFuncionarios.Salario = Convert.ToDouble(Console.ReadLine());
+
+                objFuncionarios.Inss();
+                objFuncionarios.IR();
+                objFuncionarios.VLiquido();
+
+                listFuncionarios.Add(objFuncionarios);
             }
         }
     }
