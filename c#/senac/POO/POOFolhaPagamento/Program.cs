@@ -46,7 +46,7 @@ namespace POOFolhaPagamento
                         PrintLine();
                         foreach (Funcionarios funcionario in listFuncionarios)
                         {
-                            PrintRow($"{funcionario.Id}", $"{funcionario.Nome}", $"R$  {funcionario.Salario}", $"R$  {funcionario.ValInss}", $"R$  {funcionario.ValIR}", $"R$  {funcionario.ValLiquido}");
+                            PrintRow($"{funcionario.Id}", $"{funcionario.Nome}", $"{funcionario.Salario.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValInss.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValIR.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValLiquido.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}");
                         }
                         PrintLine();
 
@@ -109,7 +109,7 @@ namespace POOFolhaPagamento
             {
                 Console.Write("Insira o Nome do funcionário: ");
                 objFuncionarios.Nome = Console.ReadLine();
-                Console.Write($"Insira o valor do Salário de {objFuncionarios.Nome}: R$");
+                Console.Write($"Insira o valor do Salário de {objFuncionarios.Nome}: R$  ");
                 objFuncionarios.Salario = Convert.ToDouble(Console.ReadLine());
 
                 objFuncionarios.Inss();

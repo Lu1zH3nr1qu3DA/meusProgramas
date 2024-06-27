@@ -17,31 +17,32 @@ namespace POOFolhaPagamento
 
         public void AtriburID()
         {
-            this.Id = 1;
+
         }
         public void Inss()
         {
-            if (this.Salario <= 1412)
+
+            if (this.Salario <= 1412.00)
             {
-                this.ValInss = this.Salario * (7.5 / 100);
+                this.ValInss = this.Salario * (7.50 / 100.00);
             }
             else
             {
                 if (this.Salario <= 2666.68)
                 {
-                    this.ValInss = (this.Salario * (9 / 100) - 21.18);
+                    this.ValInss = this.Salario * (9.00 / 100.00) - 21.18;
                 }
                 else
                 {
                     if (this.Salario <= 4000.03)
                     {
-                        this.ValInss = (this.Salario * (12 / 100) - 101.18);
+                        this.ValInss = this.Salario * (12.00 / 100.00) - 101.18;
                     }
                     else
                     {
                         if (this.Salario <= 7786.02)
                         {
-                            this.ValInss = (this.Salario * (14 / 100) - 181.18);
+                            this.ValInss = this.Salario * (14.00 / 100.00) - 181.18;
                         }
                         else
                         {
@@ -57,27 +58,27 @@ namespace POOFolhaPagamento
 
         public void IR()
         {
-            if (this.Salario <= 1412)
+            if (this.Salario > 2259.20 && this.Salario <= 2826.65)
             {
-                this.ValIR = this.Salario * (7.5 / 100);
+                this.ValIR = this.Salario * (7.50 / 100.00) - 169.44;
             }
             else
             {
-                if (this.Salario > 1412 && this.Salario <= 2666.68)
+                if (this.Salario > 2826.65 && this.Salario <= 3751.05)
                 {
-                    this.ValIR = this.Salario * (15 / 100);
+                    this.ValIR = this.Salario * (15.00 / 100.00) - 381.44;
                 }
                 else
                 {
-                    if (this.Salario > 2666.68 && this.Salario <= 4000.03)
+                    if (this.Salario > 3751.05 && this.Salario <= 4664.68)
                     {
-                        this.ValIR = this.Salario * (22.5 / 100);
+                        this.ValIR = this.Salario * (22.50 / 100.00) - 662.77;
                     }
                     else
                     {
-                        if (this.Salario > 4000.03)
+                        if (this.Salario > 4664.68)
                         {
-                            this.ValIR = this.Salario * (27.5 / 100);
+                            this.ValIR = this.Salario * (27.50 / 100.00) - 896.00;
                         }
                     }
                 }
