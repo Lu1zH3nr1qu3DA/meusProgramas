@@ -57,7 +57,7 @@ namespace POOFolhaPagamento
                         {
                             PrintRow($"{obj.Nome}", $"R${Math.Round(obj.Salario, 2)}", $"R${Math.Round(obj.ValInss, 2)}", $"R${Math.Round(obj.ValIR, 2)}", $"R${Math.Round(obj.ValLiquido, 2)}");
                         }
-                        PrintLine();                        
+                        PrintLine();
 
                         void PrintLine()
                         {
