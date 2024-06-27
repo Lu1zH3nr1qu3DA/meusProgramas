@@ -37,15 +37,16 @@ namespace POOFolhaPagamento
                         Inserir(ref objFuncionarios);
                         break;
                     case "2":
-                        int tableWidth = 73;
+
+                        int tableWidth = 96;
 
                         Console.Clear();
                         PrintLine();
-                        PrintRow("Nome", "Salário", "INSS", "IR", "Valor Líquido");
+                        PrintRow("ID", "Nome", "Salário", "INSS", "IR", "Valor Líquido");
                         PrintLine();
-                        foreach (Funcionarios obj in listFuncionarios)
+                        foreach (Funcionarios funcionario in listFuncionarios)
                         {
-                            PrintRow($"{obj.Nome}", $"R${Math.Round(obj.Salario, 2)}", $"R${Math.Round(obj.ValInss, 2)}", $"R${Math.Round(obj.ValIR, 2)}", $"R${Math.Round(obj.ValLiquido, 2)}");
+                            PrintRow($"{funcionario.Id}", $"{funcionario.Nome}", $"R$  {funcionario.Salario}", $"R$  {funcionario.ValInss}", $"R$  {funcionario.ValIR}", $"R$  {funcionario.ValLiquido}");
                         }
                         PrintLine();
 
@@ -92,7 +93,7 @@ namespace POOFolhaPagamento
                         Console.Clear();
                         Console.Write("Insira o Número do funcionário que deseja Excluir: ");
                         resposta = Console.ReadLine();
-                        int excluir = Convert.ToInt16(resposta);
+                        int excluir = Convert.ToInt16(resposta) - 1;
                         listFuncionarios.RemoveAt(excluir);
                         break;
                     case "5":
@@ -114,6 +115,9 @@ namespace POOFolhaPagamento
                 objFuncionarios.Inss();
                 objFuncionarios.IR();
                 objFuncionarios.VLiquido();
+                objFuncionarios.AtriburID();
+
+
 
                 listFuncionarios.Add(objFuncionarios);
             }

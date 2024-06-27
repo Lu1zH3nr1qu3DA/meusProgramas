@@ -8,35 +8,47 @@ namespace POOFolhaPagamento
 {
     internal class Funcionarios
     {
+        public int Id { get; set; }
         public string Nome { get; set; }
         public double Salario { get; set; }
         public double ValInss { get; set; }
         public double ValIR { get; set; }
         public double ValLiquido { get; set; }
 
-        public void Inss() 
+        public void AtriburID()
+        {
+            this.Id = 1;
+        }
+        public void Inss()
         {
             if (this.Salario <= 1412)
             {
-                this.ValInss = Salario * (7.5 / 100);
+                this.ValInss = this.Salario * (7.5 / 100);
             }
             else
             {
-                if (1412 < this.Salario && this.Salario <= 2666.68)
+                if (this.Salario <= 2666.68)
                 {
-                    this.ValInss = Salario * (9 / 100);
+                    this.ValInss = (this.Salario * (9 / 100) - 21.18);
                 }
                 else
                 {
-                    if (2666.68 < this.Salario && this.Salario <= 4000.03)
+                    if (this.Salario <= 4000.03)
                     {
-                        this.ValInss = Salario * (12 / 100);
+                        this.ValInss = (this.Salario * (12 / 100) - 101.18);
                     }
                     else
                     {
-                        if (4000.03 < this.Salario && this.Salario <= 7786.02)
+                        if (this.Salario <= 7786.02)
                         {
-                            this.ValInss = Salario * (14 / 100);
+                            this.ValInss = (this.Salario * (14 / 100) - 181.18);
+                        }
+                        else
+                        {
+                            if (this.Salario > 7786.02)
+                            {
+                                this.ValInss = 908.85;
+                            }
                         }
                     }
                 }
@@ -47,25 +59,25 @@ namespace POOFolhaPagamento
         {
             if (this.Salario <= 1412)
             {
-                this.ValIR = Salario * (7.5 / 100);
+                this.ValIR = this.Salario * (7.5 / 100);
             }
             else
             {
-                if (this.Salario <= 2666.68)
+                if (this.Salario > 1412 && this.Salario <= 2666.68)
                 {
-                    this.ValIR = Salario * (15 / 100);
+                    this.ValIR = this.Salario * (15 / 100);
                 }
                 else
                 {
-                    if (this.Salario <= 4000.03)
+                    if (this.Salario > 2666.68 && this.Salario <= 4000.03)
                     {
-                        this.ValIR = Salario * (22.5 / 100);
+                        this.ValIR = this.Salario * (22.5 / 100);
                     }
                     else
                     {
-                        if (this.Salario <= 7786.02)
+                        if (this.Salario > 4000.03)
                         {
-                            this.ValIR = Salario * (27.5 / 100);
+                            this.ValIR = this.Salario * (27.5 / 100);
                         }
                     }
                 }
