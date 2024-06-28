@@ -40,30 +40,25 @@ namespace POOFolhaPagamento
                         listFuncionarios.Add(objFuncionarios);
                         break;
                     case "2":
-                        int tableWidth = 96;
-                        Console.Clear();
-                        PrintLine(ref tableWidth);
-                        PrintRow(ref tableWidth, "ID", "Nome", "Salário", "INSS", "IR", "Valor Líquido");
-                        PrintLine(ref tableWidth);
-                        foreach (Funcionarios funcionario in listFuncionarios)
-                        {
-                            PrintRow(ref tableWidth, $"{funcionario.Id}", $"{funcionario.Nome}", $"{funcionario.Salario.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValInss.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValIR.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValLiquido.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}");
-                        }
-                        PrintLine(ref tableWidth);
+                        ExibirTabela();
                         break;
                     case "3":
                         Console.Clear();
+                        ExibirTabela();
+
                         Console.Write("Insira o Número do funcionário que deseja Alterar: ");
                         resposta = Console.ReadLine();
                         int alterar = Convert.ToInt16(resposta);
-                        listFuncionarios.ElementAt(alterar);
+
                         break;
                     case "4":
                         Console.Clear();
+                        ExibirTabela();
+
                         Console.Write("Insira o Número do funcionário que deseja Excluir: ");
                         resposta = Console.ReadLine();
-                        int excluir = Convert.ToInt16(resposta) - 1;
-                        listFuncionarios.RemoveAt(excluir);
+                        int excluir = Convert.ToInt16(resposta);
+                        listFuncionarios.RemoveAll(delegate(Funcionarios funcionario) { return funcionario.Id == excluir; });
                         break;
                     case "5":
                         break;
@@ -117,6 +112,19 @@ namespace POOFolhaPagamento
                 {
                     return text.PadRight(width - (width - text.Length) / 2).PadLeft(width);
                 }
+            }
+            void ExibirTabela()
+            {
+                int tableWidth = 96;
+                Console.Clear();
+                PrintLine(ref tableWidth);
+                PrintRow(ref tableWidth, "ID", "Nome", "Salário", "INSS", "IR", "Valor Líquido");
+                PrintLine(ref tableWidth);
+                foreach (Funcionarios funcionario in listFuncionarios)
+                {
+                    PrintRow(ref tableWidth, $"{funcionario.Id}", $"{funcionario.Nome}", $"{funcionario.Salario.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValInss.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValIR.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValLiquido.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}");
+                }
+                PrintLine(ref tableWidth);
             }
         }
     }

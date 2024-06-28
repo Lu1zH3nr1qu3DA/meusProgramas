@@ -61,13 +61,13 @@ namespace POOFolhaPagamento
             }
             else
             {
-                if (this.Salario > 2826.65 && this.Salario <= 3751.05)
+                if (this.Salario <= 3751.05)
                 {
                     this.ValIR = this.Salario * (15.00 / 100.00) - 381.44;
                 }
                 else
                 {
-                    if (this.Salario > 3751.05 && this.Salario <= 4664.68)
+                    if (this.Salario <= 4664.68)
                     {
                         this.ValIR = this.Salario * (22.50 / 100.00) - 662.77;
                     }
