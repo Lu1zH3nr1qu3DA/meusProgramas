@@ -37,59 +37,26 @@ namespace POOFolhaPagamento
                     case "1":
                         Funcionarios objFuncionarios = new Funcionarios();
                         Inserir(ref objFuncionarios);
+                        listFuncionarios.Add(objFuncionarios);
                         break;
                     case "2":
-
                         int tableWidth = 96;
-
                         Console.Clear();
-                        PrintLine();
-                        PrintRow("ID", "Nome", "Salário", "INSS", "IR", "Valor Líquido");
-                        PrintLine();
+                        PrintLine(ref tableWidth);
+                        PrintRow(ref tableWidth, "ID", "Nome", "Salário", "INSS", "IR", "Valor Líquido");
+                        PrintLine(ref tableWidth);
                         foreach (Funcionarios funcionario in listFuncionarios)
                         {
-                            PrintRow($"{funcionario.Id}", $"{funcionario.Nome}", $"{funcionario.Salario.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValInss.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValIR.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValLiquido.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}");
+                            PrintRow(ref tableWidth, $"{funcionario.Id}", $"{funcionario.Nome}", $"{funcionario.Salario.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValInss.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValIR.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValLiquido.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}");
                         }
-                        PrintLine();
-
-                        void PrintLine()
-                        {
-                            Console.WriteLine(new string('-', tableWidth));
-                        }
-
-                        void PrintRow(params string[] columns)
-                        {
-                            int width = (tableWidth - columns.Length) / columns.Length;
-                            string row = "|";
-
-                            foreach (string column in columns)
-                            {
-                                row += AlignCentre(column, width) + "|";
-                            }
-
-                            Console.WriteLine(row);
-                        }
-
-                        string AlignCentre(string text, int width)
-                        {
-                            text = text.Length > width ? text.Substring(0, width - 3) + "..." : text;
-
-                            if (string.IsNullOrEmpty(text))
-                            {
-                                return new string(' ', width);
-                            }
-                            else
-                            {
-                                return text.PadRight(width - (width - text.Length) / 2).PadLeft(width);
-                            }
-                        }
+                        PrintLine(ref tableWidth);
                         break;
                     case "3":
                         Console.Clear();
                         Console.Write("Insira o Número do funcionário que deseja Alterar: ");
                         resposta = Console.ReadLine();
                         int alterar = Convert.ToInt16(resposta);
-
+                        listFuncionarios.ElementAt(alterar);
                         break;
                     case "4":
                         Console.Clear();
@@ -119,8 +86,37 @@ namespace POOFolhaPagamento
                 objFuncionarios.VLiquido();
                 ultimoFuncionario++;
                 objFuncionarios.Id = ultimoFuncionario;
+            }
+            void PrintLine(ref int tableWidth)
+            {
+                Console.WriteLine(new string('-', tableWidth));
+            }
 
-                listFuncionarios.Add(objFuncionarios);
+            void PrintRow( ref int tableWidth, params string[] columns)
+            {
+                int width = (tableWidth - columns.Length) / columns.Length;
+                string row = "|";
+
+                foreach (string column in columns)
+                {
+                    row += AlignCentre(column, width) + "|";
+                }
+
+                Console.WriteLine(row);
+            }
+
+            string AlignCentre(string text, int width)
+            {
+                text = text.Length > width ? text.Substring(0, width - 3) + "..." : text;
+
+                if (string.IsNullOrEmpty(text))
+                {
+                    return new string(' ', width);
+                }
+                else
+                {
+                    return text.PadRight(width - (width - text.Length) / 2).PadLeft(width);
+                }
             }
         }
     }
