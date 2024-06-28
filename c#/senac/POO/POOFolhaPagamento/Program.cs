@@ -82,49 +82,49 @@ namespace POOFolhaPagamento
                 ultimoFuncionario++;
                 objFuncionarios.Id = ultimoFuncionario;
             }
-            void PrintLine(ref int tableWidth)
+            void Linha(ref int larguraTabela)
             {
-                Console.WriteLine(new string('-', tableWidth));
+                Console.WriteLine(new string('-', larguraTabela));
             }
 
-            void PrintRow( ref int tableWidth, params string[] columns)
+            void Cabecalho( ref int larguraTabela, params string[] colunas)
             {
-                int width = (tableWidth - columns.Length) / columns.Length;
+                int largura = (larguraTabela - colunas.Length) / colunas.Length;
                 string row = "|";
 
-                foreach (string column in columns)
+                foreach (string coluna in colunas)
                 {
-                    row += AlignCentre(column, width) + "|";
+                    row += Cenralizar(coluna, largura) + "|";
                 }
 
                 Console.WriteLine(row);
             }
 
-            string AlignCentre(string text, int width)
+            string Cenralizar(string texto, int largura)
             {
-                text = text.Length > width ? text.Substring(0, width - 3) + "..." : text;
+                texto = texto.Length > largura ? texto.Substring(0, largura - 3) + "..." : texto;
 
-                if (string.IsNullOrEmpty(text))
+                if (string.IsNullOrEmpty(texto))
                 {
-                    return new string(' ', width);
+                    return new string(' ', largura);
                 }
                 else
                 {
-                    return text.PadRight(width - (width - text.Length) / 2).PadLeft(width);
+                    return texto.PadRight(largura - (largura - texto.Length) / 2).PadLeft(largura);
                 }
             }
             void ExibirTabela()
             {
-                int tableWidth = 96;
+                int larguraTabela = 96;
                 Console.Clear();
-                PrintLine(ref tableWidth);
-                PrintRow(ref tableWidth, "ID", "Nome", "Salário", "INSS", "IR", "Valor Líquido");
-                PrintLine(ref tableWidth);
+                Linha(ref larguraTabela);
+                Cabecalho(ref larguraTabela, "ID", "Nome", "Salário", "INSS", "IR", "Valor Líquido");
+                Linha(ref larguraTabela);
                 foreach (Funcionarios funcionario in listFuncionarios)
                 {
-                    PrintRow(ref tableWidth, $"{funcionario.Id}", $"{funcionario.Nome}", $"{funcionario.Salario.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValInss.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValIR.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValLiquido.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}");
+                    Cabecalho(ref larguraTabela, $"{funcionario.Id}", $"{funcionario.Nome}", $"{funcionario.Salario.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValInss.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValIR.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{funcionario.ValLiquido.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}");
                 }
-                PrintLine(ref tableWidth);
+                Linha(ref larguraTabela);
             }
         }
     }
