@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POOBoletim", "BoletimPOO\PO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POOFolhaPagamento", "POOFolhaPagamento\POOFolhaPagamento.csproj", "{F8427BD9-3FAD-4843-9787-207C9D260630}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO.Danfe", "POO.Danfe\POO.Danfe.csproj", "{726F02C0-6F4A-4B31-A451-46D8671CB521}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F8427BD9-3FAD-4843-9787-207C9D260630}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8427BD9-3FAD-4843-9787-207C9D260630}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8427BD9-3FAD-4843-9787-207C9D260630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{726F02C0-6F4A-4B31-A451-46D8671CB521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{726F02C0-6F4A-4B31-A451-46D8671CB521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{726F02C0-6F4A-4B31-A451-46D8671CB521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{726F02C0-6F4A-4B31-A451-46D8671CB521}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
