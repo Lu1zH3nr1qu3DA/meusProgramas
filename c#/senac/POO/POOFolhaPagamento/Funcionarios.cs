@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,10 +16,6 @@ namespace POOFolhaPagamento
         public double ValIR { get; set; }
         public double ValLiquido { get; set; }
 
-        public void AtriburID()
-        {
-
-        }
         public void Inss()
         {
 

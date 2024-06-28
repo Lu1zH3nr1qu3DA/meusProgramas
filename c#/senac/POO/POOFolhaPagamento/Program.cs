@@ -14,6 +14,8 @@ namespace POOFolhaPagamento
         {
             List<Funcionarios> listFuncionarios = new List<Funcionarios>();
 
+            int ultimoFuncionario = 0;
+
             string resposta = "";
 
             while (resposta != "5")
@@ -115,9 +117,8 @@ namespace POOFolhaPagamento
                 objFuncionarios.Inss();
                 objFuncionarios.IR();
                 objFuncionarios.VLiquido();
-                objFuncionarios.AtriburID();
-
-
+                ultimoFuncionario++;
+                objFuncionarios.Id = ultimoFuncionario;
 
                 listFuncionarios.Add(objFuncionarios);
             }
