@@ -15,7 +15,7 @@ namespace POO.Danfe
 
             string resposta = "";
 
-            while (resposta != "")
+            while (resposta != "4")
             {
                 Console.Clear();
                 Console.WriteLine("Menu:");
@@ -65,7 +65,10 @@ namespace POO.Danfe
             {
                 Console.Write("Insira o Nome do Produto: ");
                 produto.Nome = Console.ReadLine();
-
+                Console.Write($"Insira o Preço do(a) {produto.Nome}: ");
+                produto.ValUnitario = Convert.ToDouble(Console.ReadLine());
+                Console.Write($"Insira a Quantidade do(a) {produto.Nome}: ");
+                produto.Quantidade = Convert.ToInt16(Console.ReadLine());
             }
 
             void ExibirTabela()
@@ -73,11 +76,19 @@ namespace POO.Danfe
                 int larguraTabela = 96;
                 Console.Clear();
                 Linha(ref larguraTabela);
-                Cabecalho(ref larguraTabela, "Nome", "", "INSS", "IR", "Valor Líquido");
-                Linha(ref larguraTabela);
                 foreach (Clientes cliente in clientes)
                 {
-                    Cabecalho(ref larguraTabela, $"{cliente.Nome}", $"{cliente.Endereco}", $"{cliente.Numero}", $"{cliente.Cidade}");
+                    Console.WriteLine($"Nome: {cliente.Nome}");
+                    Console.WriteLine($"Endereço: {cliente.Endereco}");
+                    Console.WriteLine($"Número: {cliente.Numero}");
+                    Console.WriteLine($"Cidade: {cliente.Cidade}\n");
+                    foreach (Produtos produto in produtos)
+                    {
+                        Linha(ref larguraTabela);
+                        Cabecalho(ref larguraTabela, "Item", "Produto", "Valor Unitário", "Quantidade", "Total");
+                        Linha(ref larguraTabela);
+                        Cabecalho(ref larguraTabela, $"{produto.Item}", $"{produto.Nome}", $"{produto.ValUnitario}", $"{produto.Quantidade}", $"{produto.Total}");
+                    }
                 }
                 Linha(ref larguraTabela);
             }
