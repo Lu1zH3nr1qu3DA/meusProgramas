@@ -94,13 +94,13 @@ namespace POOFolhaPagamento
 
                 foreach (string coluna in colunas)
                 {
-                    row += Cenralizar(coluna, largura) + "|";
+                    row += Centralizar(coluna, largura) + "|";
                 }
 
                 Console.WriteLine(row);
             }
 
-            string Cenralizar(string texto, int largura)
+            string Centralizar(string texto, int largura)
             {
                 texto = texto.Length > largura ? texto.Substring(0, largura - 3) + "..." : texto;
 
