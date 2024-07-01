@@ -13,17 +13,11 @@ namespace POO.Danfe
         public string Nome { get; set; }
         public double ValUnitario { get; set; }
         public int Quantidade { get; set; }
-        public double Subtotal { get; set; }
-        public double Total { get; set; }
+        public double TotalUnitario { get; set; }
 
-        public void CalcSubtotal()
+        public void CalcTotalUnitario()
         {
-            this.Subtotal = this.Quantidade * this.ValUnitario;
-        }
-
-        public void CalcTotal()
-        {
-            
+            this.TotalUnitario = this.Quantidade * this.ValUnitario;
         }
     }
 }

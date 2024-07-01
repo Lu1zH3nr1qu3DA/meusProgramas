@@ -49,7 +49,7 @@ namespace POO.Danfe
                         Console.Write($"Insira a Quantidade do(a) {produto.Nome}: ");
                         produto.Quantidade = Convert.ToInt16(Console.ReadLine());
 
-                        produto.CalcSubtotal();
+                        produto.CalcTotalUnitario();
 
                         listProdutos.Add(produto);
                         break;
@@ -62,11 +62,11 @@ namespace POO.Danfe
                         Console.WriteLine($"Número: {cliente.Numero}");
                         Console.WriteLine($"Cidade: {cliente.Cidade}\n");
                         Linha(ref larguraTabela);
-                        Cabecalho(ref larguraTabela, "Item", "Produto", "Valor Unitário", "Quantidade", "Subtotal");
+                        Cabecalho(ref larguraTabela, "Item", "Produto", "Valor Unitário", "Quantidade", "Total");
                         foreach (Produtos objProduto in listProdutos)
                         {
                             Linha(ref larguraTabela);
-                            Cabecalho(ref larguraTabela, $"{objProduto.Item}", $"{objProduto.Nome}", $"{objProduto.ValUnitario.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}", $"{objProduto.Quantidade}", $"{objProduto.Subtotal.ToString("C", new System.Globalization.CultureInfo("pt-BR"))}");
+                            Cabecalho(ref larguraTabela, $"{objProduto.Item}", $"{objProduto.Nome}", $"{objProduto.ValUnitario}", $"{objProduto.Quantidade}", $"{objProduto.TotalUnitario}");
                         }
                         Linha(ref larguraTabela);
                         break;
