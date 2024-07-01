@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POO.Danfe
 {
-    internal class Clientes
+    public class Clientes
     {
         public string Nome { get; set; }
         public string Endereco { get; set; }
