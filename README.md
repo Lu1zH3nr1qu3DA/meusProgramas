@@ -1,14 +1,14 @@
 # [meusProgramas](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main)
-Alguns projetos que fiz e resolvi torná-los públicos. Até agora, são apenas projetos pessoais ou do curso de informática, projetos simples e básicos que você pode aprender com eles.
+These are some projects I did and decided to make them public. So far, these are just personal projects or computer course projects, they're simple and basic projects that you can learn from.
 
-  ## [c#](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main/c%23)
-  Alguns projetos da linguagem C# talvez necessitem ser compilados. Uma parte deles usa .NET versão 4.7.2, por isso, utilize essa versão para compilá-los. Aqueles projetos com a terminação `8`    em seu nome usam .NET versão 8.0.302, então fique atento quanto a versão do .NET SDK. Os executáveis (`.exe`) disponíveis estão localizados em `.../"nomeDoProjeto"/bin/debug/net8.0/"nomeDoProjeto".exe`.
+  ## [cs](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main/c%23)
+  This folder contains some C# projects. Some of them use .NET version 4.7.2, so use that version to compile them. Those projects with the ending `8` in their name use .NET version 8.0.302, so be aware of the .NET SDK version. The available executables (`.exe`) are located in `.../"ProjectName"/bin/debug/net8.0/"ProjectName".exe`.
   
-  ## [c++](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main/c%2B%2B)
-  Projetos utilizando a linguagem C++.
+  ## [cpp](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main/c%2B%2B)
+  Projects in C++.
 
   ## [js](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main/js)
-  Projetos utilizando a linguagem JavaScript.
+  Some JavaScript, Node & Discord.js projects.
   
   ## [portugol](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main/portugol)
-  Projetos utilizando a linguagem de alto nível Portugol.
+  Projects that use the high-level algorithmic language Portugol.
