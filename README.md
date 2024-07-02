@@ -1,4 +1,4 @@
-# [meusProgramas](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main)
+# [myPrograms](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main)
 These are some projects I did and decided to make them public. So far, these are just personal projects or computer course projects, they're simple and basic projects that you can learn from.
 
   ## [cs](https://github.com/Lu1zH3nr1qu3DA/meusProgramas/tree/main/c%23)
