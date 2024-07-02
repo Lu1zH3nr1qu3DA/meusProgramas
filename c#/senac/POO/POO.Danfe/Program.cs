@@ -70,6 +70,8 @@ namespace POO.Danfe
                         }
                         Linha(ref larguraTabela);
                         break;
+                    case "4":
+                        break;
                     default:
                         Console.WriteLine("Erro: a opção inserida não existe.");
                         break;
