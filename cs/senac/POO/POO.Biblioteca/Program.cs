@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,13 +33,12 @@ namespace POObiblioteca
                 switch (resposta)
                 {
                     case "1":
-                        Console.Clear();
-                        Console.WriteLine("1 - Cadastrar");
-                        Console.WriteLine("2 - Listar");
-                        Console.WriteLine("3 - Alterar");
-                        Console.WriteLine("4 - Excluir");
-                        resposta = Console.ReadLine();
-
+                            Console.Clear();
+                            Console.WriteLine("1 - Cadastrar");
+                            Console.WriteLine("2 - Listar");
+                            Console.WriteLine("3 - Alterar");
+                            Console.WriteLine("4 - Excluir");
+                            resposta = Console.ReadLine();
                         switch (resposta)
                         {
                             case "1":
@@ -325,8 +325,12 @@ namespace POObiblioteca
                         Console.Write("Erro: a opção inserida não existe.");
                         break;
                 }
-                Console.Write("\n\nPressione qualquer tecla para continuar. . . ");
-                Console.ReadKey();
+                Console.Write("\n\nPressione qualquer tecla para continuar ou ESC para voltar. . . ");
+                ConsoleKeyInfo voltarOuContinuar = Console.ReadKey();
+                if (voltarOuContinuar.Key == ConsoleKey.Escape)
+                {
+                    break;
+                }
             }
         }
     }
