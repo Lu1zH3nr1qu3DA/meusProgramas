@@ -25,6 +25,7 @@ namespace POObiblioteca
             while (resposta != "9")
             {
                 Console.Clear();
+                Console.WriteLine(". . . . . . Biblioteca . . . . . .\n");
                 Console.WriteLine("Escolha uma opção."); //Menu principal
                 Console.WriteLine("1 - Aluno");
                 Console.WriteLine("2 - Autor");
@@ -38,63 +39,75 @@ namespace POObiblioteca
                 switch (resposta)
                 {
                     case "1": //Menu alunos
-                        Console.Clear();
-                        Console.WriteLine("1 - Cadastrar");
-                        Console.WriteLine("2 - Listar");
-                        Console.WriteLine("3 - Alterar");
-                        Console.WriteLine("4 - Excluir\n");
-                        Console.Write(">> ");
 
-                        resposta = Console.ReadLine();
-
-                        switch (resposta)
+                        while (resposta != "5")
                         {
-                            case "1": //Cadastrar aluno
-                                Aluno objaluno = new Aluno();
+                            Console.Clear();
+                            Console.WriteLine(". . . . . . Alunos . . . . . .\n");
+                            Console.WriteLine("Escolha uma opção.");
+                            Console.WriteLine("1 - Cadastrar");
+                            Console.WriteLine("2 - Listar");
+                            Console.WriteLine("3 - Alterar");
+                            Console.WriteLine("4 - Excluir\n");
+                            Console.WriteLine("5 - Voltar para o Menu anterior\n");
+                            Console.Write(">> ");
 
-                                Console.Clear();
-                                InserirAluno(ref objaluno);
+                            resposta = Console.ReadLine();
 
-                                Alunos.Add(objaluno);
-                                break;
-                            case "2": //Listar alunos
-                                Console.Clear();
-                                Linha();
-                                Cabecalho("Código", "Nome", "Celular");
-                                Linha();
-                                foreach (Aluno alunos in Alunos)
-                                {
+                            switch (resposta)
+                            {
+                                case "1": //Cadastrar aluno
+                                    Aluno objaluno = new Aluno();
+
+                                    Console.Clear();
+                                    InserirAluno(ref objaluno);
+
+                                    Alunos.Add(objaluno);
+                                    break;
+                                case "2": //Listar alunos
+                                    Console.Clear();
                                     Linha();
-                                    Cabecalho($"{alunos.Codigo}", $"{alunos.Nome}", $"{alunos.Celular}");
-                                }
-                                Linha();
-                                Console.Write("Pressione qualquer tecla para continuar. . . ");
-                                
-                                Console.ReadKey();
-                                break;
-                            case "3": //Alterar aluno
-                                Console.Clear();
-                                Console.Write("Insira o Código do Aluno que deseja Alterar: ");
+                                    Cabecalho("Código", "Nome", "Celular");
+                                    Linha();
+                                    foreach (Aluno alunos in Alunos)
+                                    {
+                                        Linha();
+                                        Cabecalho($"{alunos.Codigo}", $"{alunos.Nome}", $"{alunos.Celular}");
+                                    }
+                                    Linha();
+                                    Console.Write("Pressione qualquer tecla para continuar. . . ");
 
-                                codigo = Convert.ToInt16(Console.ReadLine());
+                                    Console.ReadKey();
+                                    break;
+                                case "3": //Alterar aluno
+                                    Console.Clear();
+                                    Console.Write("Insira o Código do Aluno que deseja Alterar: ");
 
-                                var item = Alunos.First(aluno => aluno.Codigo == codigo);
-                                
-                                objaluno = item;
+                                    codigo = Convert.ToInt16(Console.ReadLine());
 
-                                InserirAluno(ref objaluno);
-                                break;
-                            case "4": //Excluir aluno
-                                Console.Clear();
-                                Console.WriteLine("Informe o Código do Aluno para Excluir: ");
+                                    var item = Alunos.First(aluno => aluno.Codigo == codigo);
 
-                                codigo = Convert.ToInt32(Console.ReadLine());
+                                    objaluno = item;
 
-                                Alunos.RemoveAll(delegate (Aluno f) { return f.Codigo == codigo; });
-                                break;
-                            default:
-                                Console.Write("Erro: a opção inserida não existe.");
-                                return;
+                                    InserirAluno(ref objaluno);
+                                    break;
+                                case "4": //Excluir aluno
+                                    Console.Clear();
+                                    Console.WriteLine("Informe o Código do Aluno para Excluir: ");
+
+                                    codigo = Convert.ToInt32(Console.ReadLine());
+
+                                    Alunos.RemoveAll(delegate (Aluno f) { return f.Codigo == codigo; });
+                                    break;
+                                case "5":
+                                    break;
+                                default:
+                                    Console.WriteLine("Erro: a opção inserida não existe. ");
+                                    Console.Write("Pressione qualquer tecla para continuar. . . ");
+
+                                    Console.ReadKey();
+                                    break;
+                            }
                         }
                         break;
 
@@ -179,8 +192,8 @@ namespace POObiblioteca
                                 Autores.RemoveAll(delegate (Autor f) { return f.Codigo == codigo; });
                                 break;
                             default:
-                                Console.Write("Erro: a opção inserida não existe.");
-                                return;
+                                Console.WriteLine("Erro: a opção inserida não existe.");
+                                break;
                         }
                         void InserirAutor(ref Autor objautor)
                         {
@@ -263,8 +276,8 @@ namespace POObiblioteca
                                 Editoras.RemoveAll(delegate (Editora f) { return f.Codigo == codigo; });
                                 break;
                             default:
-                                Console.Write("Erro: a opção inserida não existe.");
-                                return;
+                                Console.WriteLine("Erro: a opção inserida não existe.");
+                                break;
                         }
 
                         void InserirEditora(ref Editora objeditora)
@@ -351,7 +364,7 @@ namespace POObiblioteca
                                 break;
                             default:
                                 Console.WriteLine("Erro: a opção inserida não existe.");
-                                return;
+                                break;
                         }
                         void InserirLivro(ref Livro objlivro)
                         {
@@ -427,8 +440,8 @@ namespace POObiblioteca
                             case "4": //Excluir empréstimo
                                 break;
                             default:
-                                Console.Write("Erro: a opção inserida não existe.");
-                                return;
+                                Console.WriteLine("Erro: a opção inserida não existe.");
+                                break;
                         }
                         void InserirEmprestimo(ref Emprestimo objemprestimo)
                         {
@@ -451,13 +464,13 @@ namespace POObiblioteca
                         }
                         break;
                     default:
-                        Console.Write("Erro: a opção inserida não existe.");
-                        return;
+                        Console.WriteLine("Erro: a opção inserida não existe.");
+                        break;
                 }
+                Console.Write("Pressione qualquer tecla para continuar. . . ");
+
+                Console.ReadKey();
             }
-            Console.Write("Pressione qualquer tecla para continuar. . . ");
-            
-            Console.ReadKey();
 
             //Métodos da tabela//
             void Linha() //Inserir linha separadora
