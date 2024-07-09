@@ -23,11 +23,11 @@ namespace POObiblioteca
             List<Editora> Editoras = new List<Editora>();
             List<Livro> Livros = new List<Livro>();
 
-            while (resposta != "9")
+            while (resposta != "9") //Menu principal
             {
                 Console.Clear();
                 Console.WriteLine(". . . . . . Biblioteca . . . . . .\n");
-                Console.WriteLine("Escolha uma opção."); //Menu principal
+                Console.WriteLine("Escolha uma opção.");
                 Console.WriteLine("1 - Aluno");
                 Console.WriteLine("2 - Autor");
                 Console.WriteLine("3 - Editora");
