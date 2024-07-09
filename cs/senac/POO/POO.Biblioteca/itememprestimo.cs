@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POObiblioteca
 {
-    public class itememprestimo
+    public class ItemEmprestimo
     {
         public int EmprestimoCodigo { get; set; }
         public int LivroCodigo { get; set;}

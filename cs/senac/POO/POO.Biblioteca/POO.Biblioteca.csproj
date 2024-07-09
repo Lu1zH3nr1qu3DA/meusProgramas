@@ -47,7 +47,7 @@
     <Compile Include="Autor.cs" />
     <Compile Include="Editora.cs" />
     <Compile Include="Emprestimo.cs" />
-    <Compile Include="itememprestimo.cs" />
+    <Compile Include="ItemEmprestimo.cs" />
     <Compile Include="Livro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

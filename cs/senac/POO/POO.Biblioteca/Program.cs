@@ -33,6 +33,7 @@ namespace POObiblioteca
                 Console.WriteLine("3 - Editora");
                 Console.WriteLine("4 - Livro");
                 Console.WriteLine("5 - Emprestimo\n");
+                Console.WriteLine("6 - Sair\n");
                 Console.Write(">> ");
 
                 resposta = Console.ReadLine();
@@ -40,7 +41,6 @@ namespace POObiblioteca
                 switch (resposta)
                 {
                     case "1": //Menu alunos
-
                         while (resposta != "5")
                         {
                             Console.Clear();
@@ -111,13 +111,15 @@ namespace POObiblioteca
                             }
                         }
                         break;
-                        
                     case "2": //Menu autores
                         Console.Clear();
+                        Console.WriteLine(". . . . . . Autores . . . . . .\n");
+                        Console.WriteLine("Escolha uma opção.");
                         Console.WriteLine("1 - Cadastrar");
                         Console.WriteLine("2 - Listar");
                         Console.WriteLine("3 - Alterar");
                         Console.WriteLine("4 - Excluir\n");
+                        Console.WriteLine("5 - Voltar para o Menu anterior\n");
                         Console.Write(">> ");
 
                         resposta = Console.ReadLine();
@@ -165,6 +167,8 @@ namespace POObiblioteca
                                 
                                 Autores.RemoveAll(delegate (Autor f) { return f.Codigo == codigo; });
                                 break;
+                            case "5":
+                                break;
                             default:
                                 Console.WriteLine("Erro: a opção inserida não existe.");
                                 break;
@@ -172,12 +176,15 @@ namespace POObiblioteca
                         break;
                     case "3": //Menu editoras
                         Console.Clear();
+                        Console.WriteLine(". . . . . . Editoras . . . . . .\n");
+                        Console.WriteLine("Escolha uma opção.");
                         Console.WriteLine("1 - Cadastrar");
                         Console.WriteLine("2 - Listar");
                         Console.WriteLine("3 - Alterar");
                         Console.WriteLine("4 - Excluir\n");
+                        Console.WriteLine("5 - Voltar para o Menu anterior\n");
                         Console.Write(">> ");
-                        
+
                         resposta = Console.ReadLine();
 
                         switch (resposta)
@@ -226,6 +233,8 @@ namespace POObiblioteca
                                 
                                 Editoras.RemoveAll(delegate (Editora f) { return f.Codigo == codigo; });
                                 break;
+                            case "5":
+                                break;
                             default:
                                 Console.WriteLine("Erro: a opção inserida não existe.");
                                 break;
@@ -233,12 +242,15 @@ namespace POObiblioteca
                         break;
                     case "4": //Menu livros
                         Console.Clear();
+                        Console.WriteLine(". . . . . . Alunos . . . . . .\n");
+                        Console.WriteLine("Escolha uma opção.");
                         Console.WriteLine("1 - Cadastrar");
                         Console.WriteLine("2 - Listar");
                         Console.WriteLine("3 - Alterar");
                         Console.WriteLine("4 - Excluir\n");
+                        Console.WriteLine("5 - Voltar para o Menu anterior\n");
                         Console.Write(">> ");
-                        
+
                         resposta = Console.ReadLine();
 
                         switch (resposta)
@@ -285,6 +297,8 @@ namespace POObiblioteca
                                 
                                 Livros.RemoveAll(delegate (Livro f) { return f.Codigo == codigo; });
                                 break;
+                            case "5":
+                                break;
                             default:
                                 Console.WriteLine("Erro: a opção inserida não existe.");
                                 break;
@@ -292,12 +306,15 @@ namespace POObiblioteca
                         break;
                     case "5": //Menu empréstimos
                         Console.Clear();
+                        Console.WriteLine(". . . . . . Empréstimos . . . . . .\n");
+                        Console.WriteLine("Escolha uma opção.");
                         Console.WriteLine("1 - Cadastrar");
                         Console.WriteLine("2 - Listar");
                         Console.WriteLine("3 - Alterar");
                         Console.WriteLine("4 - Excluir\n");
+                        Console.WriteLine("5 - Voltar para o Menu anterior\n");
                         Console.Write(">> ");
-                        
+
                         resposta = Console.ReadLine();
 
                         switch (resposta)
@@ -327,9 +344,21 @@ namespace POObiblioteca
                                 break;
                             case "4": //Excluir empréstimo
                                 break;
+                            case "5":
+                                break;
                             default:
                                 Console.WriteLine("Erro: a opção inserida não existe.");
                                 break;
+                        }
+                        break;
+                    case "6":
+                        Console.Write("Tem certeza que deseja sair? TODOS OS DADOS SERÃO PERDIDOS. Continuar? S/N ");
+
+                        resposta = Console.ReadLine();
+
+                        if (resposta == "S" || resposta == "s" || resposta == "Y" || resposta == "y")
+                        {
+                           return;
                         }
                         break;
                     default:
