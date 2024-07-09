@@ -14,5 +14,33 @@ namespace POObiblioteca
         public string Endereco { get; set; }
         public string Telefone { get; set; }
         public string Cidade { get; set; }
+
+        public void InserirEditora(ref Editora objeditora)
+        {
+            Console.WriteLine("Informe os dados:");
+            Console.Write("Código: ");
+
+            objeditora.Codigo = Convert.ToInt16(Console.ReadLine());
+
+            Console.Write("Nome: ");
+
+            objeditora.Nome = Console.ReadLine();
+
+            Console.Write("E-mail: ");
+
+            objeditora.Email = Console.ReadLine();
+
+            Console.Write("Telefone: ");
+
+            objeditora.Telefone = Console.ReadLine();
+
+            Console.Write("Endereço: ");
+
+            objeditora.Endereco = Console.ReadLine();
+
+            Console.Write("Cidade: ");
+
+            objeditora.Cidade = Console.ReadLine();
+        }
     }
 }

@@ -14,5 +14,28 @@ namespace POObiblioteca
         public string Email { get; set; }
         public string Origem { get; set; }
 
+        public void InserirAutor(ref Autor objautor)
+        {
+            Console.WriteLine("Informe os dados:");
+            Console.Write("Código: ");
+
+            objautor.Codigo = Convert.ToInt16(Console.ReadLine());
+
+            Console.Write("Nome: ");
+
+            objautor.Nome = Console.ReadLine();
+
+            Console.Write("Nascimento: ");
+
+            objautor.Nascimento = Convert.ToDateTime(Console.ReadLine());
+
+            Console.Write("E-mail: ");
+
+            objautor.Email = Console.ReadLine();
+
+            Console.Write("Origem: ");
+
+            objautor.Origem = Console.ReadLine();
+        }
     }
 }

@@ -14,5 +14,25 @@ namespace POObiblioteca
         public string Observacoes { get; set; }
         public List<Aluno> alunos;
         public List<Livro> livros;
+
+        public void InserirEmprestimo(ref Emprestimo objemprestimo)
+        {
+            Console.WriteLine("Informe os dados");
+            Console.Write("Codigo: ");
+
+            objemprestimo.Codigo = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Empréstimo: ");
+
+            objemprestimo.DataEmprestimo = Convert.ToDateTime(Console.ReadLine());
+
+            Console.Write("Devolução: ");
+
+            objemprestimo.DataDevolucao = Convert.ToDateTime(Console.ReadLine());
+
+            Console.Write("Observações: ");
+
+            objemprestimo.Observacoes = Console.ReadLine();
+        }
     }
 }

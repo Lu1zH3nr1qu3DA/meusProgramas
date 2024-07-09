@@ -16,5 +16,41 @@ namespace POObiblioteca
         public string Secao { get; set; }
         public string ISBN { get; set; }
         public DateTime Lancamento { get; set; }
+
+        public void InserirLivro(ref Livro objlivro)
+        {
+            Console.WriteLine("Informe os dados:");
+            Console.Write("Código: ");
+
+            objlivro.Codigo = Convert.ToInt16(Console.ReadLine());
+
+            Console.Write("Título: ");
+
+            objlivro.Titulo = Console.ReadLine();
+
+            Console.Write("Autor: ");
+
+            objlivro.Autor = Console.ReadLine();
+
+            Console.Write("Editora: ");
+
+            objlivro.Editora = Console.ReadLine();
+
+            Console.Write("Genero: ");
+
+            objlivro.Genero = Console.ReadLine();
+
+            Console.Write("Seção: ");
+
+            objlivro.Secao = Console.ReadLine();
+
+            Console.Write("ISBN: ");
+
+            objlivro.ISBN = Console.ReadLine();
+
+            Console.Write("Lançamento: ");
+
+            objlivro.Lancamento = Convert.ToDateTime(Console.ReadLine());
+        }
     }
 }

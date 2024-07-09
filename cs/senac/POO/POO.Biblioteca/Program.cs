@@ -60,7 +60,7 @@ namespace POObiblioteca
                                     Aluno objaluno = new Aluno();
 
                                     Console.Clear();
-                                    InserirAluno(ref objaluno);
+                                    objaluno.InserirDados(ref objaluno);
 
                                     Alunos.Add(objaluno);
                                     break;
@@ -89,7 +89,7 @@ namespace POObiblioteca
 
                                     objaluno = item;
 
-                                    InserirAluno(ref objaluno);
+                                    objaluno.InserirDados(ref objaluno);
                                     break;
                                 case "4": //Excluir aluno
                                     Console.Clear();
@@ -110,34 +110,7 @@ namespace POObiblioteca
                             }
                         }
                         break;
-
-                        void InserirAluno(ref Aluno objaluno)
-                        {
-                            Console.WriteLine("Informe os dados:");
-                            Console.Write("Código: ");
-
-                            objaluno.Codigo = Convert.ToInt16(Console.ReadLine());
-
-                            Console.Write("Nome: ");
-
-                            objaluno.Nome = Console.ReadLine();
-
-                            Console.Write("Nascimento: ");
-
-                            objaluno.Nascimento = Convert.ToDateTime(Console.ReadLine());
-
-                            Console.Write("Endereço: ");
-
-                            objaluno.Endereco = Console.ReadLine();
-
-                            Console.Write("Número: ");
-
-                            objaluno.Numero = Console.ReadLine();
-
-                            Console.Write("Celular: ");
-
-                            objaluno.Celular = Console.ReadLine();
-                        }
+                        
                     case "2": //Menu autores
                         Console.Clear();
                         Console.WriteLine("1 - Cadastrar");
@@ -154,7 +127,7 @@ namespace POObiblioteca
                                 Autor objautor = new Autor();
 
                                 Console.Clear();
-                                InserirAutor(ref objautor);
+                                objautor.InserirAutor(ref objautor);
                                 
                                 Autores.Add(objautor);
                                 break;
@@ -181,7 +154,7 @@ namespace POObiblioteca
                                 
                                 objautor = item;
                                 
-                                InserirAutor(ref objautor);
+                                objautor.InserirAutor(ref objautor);
                                 break;
                             case "4": //Excluir autor
                                 Console.Clear();
@@ -194,29 +167,6 @@ namespace POObiblioteca
                             default:
                                 Console.WriteLine("Erro: a opção inserida não existe.");
                                 break;
-                        }
-                        void InserirAutor(ref Autor objautor)
-                        {
-                            Console.WriteLine("Informe os dados:");
-                            Console.Write("Código: ");
-                            
-                            objautor.Codigo = Convert.ToInt16(Console.ReadLine());
-                            
-                            Console.Write("Nome: ");
-                            
-                            objautor.Nome = Console.ReadLine();
-                            
-                            Console.Write("Nascimento: ");
-                            
-                            objautor.Nascimento = Convert.ToDateTime(Console.ReadLine());
-                            
-                            Console.Write("E-mail: ");
-                            
-                            objautor.Email = Console.ReadLine();
-                            
-                            Console.Write("Origem: ");
-                            
-                            objautor.Origem = Console.ReadLine();
                         }
                         break;
                     case "3": //Menu editoras
@@ -235,7 +185,7 @@ namespace POObiblioteca
                                 Editora objeditora = new Editora();
                         
                                 Console.Clear();
-                                InserirEditora(ref objeditora);
+                                objeditora.InserirEditora(ref objeditora);
                                 
                                 Editoras.Add(objeditora);
                                 break;
@@ -265,7 +215,7 @@ namespace POObiblioteca
                                 
                                 objeditora = item;
                                 
-                                InserirEditora(ref objeditora);
+                                objeditora.InserirEditora(ref objeditora);
                                 break;
                             case "4": //Excluir editora
                                 Console.Clear();
@@ -278,34 +228,6 @@ namespace POObiblioteca
                             default:
                                 Console.WriteLine("Erro: a opção inserida não existe.");
                                 break;
-                        }
-
-                        void InserirEditora(ref Editora objeditora)
-                        {
-                            Console.WriteLine("Informe os dados:");
-                            Console.Write("Código: ");
-                            
-                            objeditora.Codigo = Convert.ToInt16(Console.ReadLine());
-                            
-                            Console.Write("Nome: ");
-                            
-                            objeditora.Nome = Console.ReadLine();
-                            
-                            Console.Write("E-mail: ");
-                            
-                            objeditora.Email = Console.ReadLine();
-                            
-                            Console.Write("Telefone: ");
-                            
-                            objeditora.Telefone = Console.ReadLine();
-                            
-                            Console.Write("Endereço: ");
-                            
-                            objeditora.Endereco = Console.ReadLine();
-                            
-                            Console.Write("Cidade: ");
-                            
-                            objeditora.Cidade = Console.ReadLine();
                         }
                         break;
                     case "4": //Menu livros
@@ -324,7 +246,7 @@ namespace POObiblioteca
                                 Livro objlivro = new Livro();
                                 
                                 Console.Clear();
-                                InserirLivro(ref objlivro);
+                                objlivro.InserirLivro(ref objlivro);
                                 
                                 Livros.Add(objlivro);
                                 break;
@@ -352,7 +274,7 @@ namespace POObiblioteca
                                 
                                 objlivro = item;
                                 
-                                InserirLivro(ref objlivro);
+                                objlivro.InserirLivro(ref objlivro);
                                 break;
                             case "4": //Excluir livro
                                 Console.Clear();
@@ -365,41 +287,6 @@ namespace POObiblioteca
                             default:
                                 Console.WriteLine("Erro: a opção inserida não existe.");
                                 break;
-                        }
-                        void InserirLivro(ref Livro objlivro)
-                        {
-                            Console.WriteLine("Informe os dados:");
-                            Console.Write("Código: ");
-                            
-                            objlivro.Codigo = Convert.ToInt16(Console.ReadLine());
-                            
-                            Console.Write("Título: ");
-                            
-                            objlivro.Titulo = Console.ReadLine();
-                            
-                            Console.Write("Autor: ");
-                            
-                            objlivro.Autor = Console.ReadLine();
-                            
-                            Console.Write("Editora: ");
-                            
-                            objlivro.Editora = Console.ReadLine();
-                            
-                            Console.Write("Genero: ");
-                            
-                            objlivro.Genero = Console.ReadLine();
-                            
-                            Console.Write("Seção: ");
-                            
-                            objlivro.Secao = Console.ReadLine();
-                            
-                            Console.Write("ISBN: ");
-                            
-                            objlivro.ISBN = Console.ReadLine();
-                            
-                            Console.Write("Lançamento: ");
-                            
-                            objlivro.Lancamento = Convert.ToDateTime(Console.ReadLine());
                         }
                         break;
                     case "5": //Menu empréstimos
@@ -425,7 +312,7 @@ namespace POObiblioteca
                                 {
                                     Console.WriteLine($"{aluno.Codigo}", $"{aluno.Nome}");
                                 }
-                                InserirEmprestimo(ref objemprestimo);
+                                objemprestimo.InserirEmprestimo(ref objemprestimo);
                                 
                                 Aluno objaluno = new Aluno();
                                 
@@ -442,25 +329,6 @@ namespace POObiblioteca
                             default:
                                 Console.WriteLine("Erro: a opção inserida não existe.");
                                 break;
-                        }
-                        void InserirEmprestimo(ref Emprestimo objemprestimo)
-                        {
-                            Console.WriteLine("Informe os dados");
-                            Console.Write("Codigo: ");
-                            
-                            objemprestimo.Codigo = Convert.ToInt32(Console.ReadLine());
-                            
-                            Console.Write("Empréstimo: ");
-                            
-                            objemprestimo.DataEmprestimo = Convert.ToDateTime(Console.ReadLine());
-                            
-                            Console.Write("Devolução: ");
-                            
-                            objemprestimo.DataDevolucao = Convert.ToDateTime(Console.ReadLine());
-                            
-                            Console.Write("Observações: ");
-                            
-                            objemprestimo.Observacoes = Console.ReadLine();
                         }
                         break;
                     default:
