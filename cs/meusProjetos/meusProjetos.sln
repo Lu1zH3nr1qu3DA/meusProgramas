@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "toChar", "randomHex\toChar.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tempoDeVida", "tempoDeVida\tempoDeVida.csproj", "{49313A84-CB4F-4D0F-A87F-9EE239C283EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteWindowsFormsApp1", "TesteWindowsFormsApp1\TesteWindowsFormsApp1.csproj", "{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,22 @@ Global
 		{49313A84-CB4F-4D0F-A87F-9EE239C283EA}.Release|x64.Build.0 = Release|Any CPU
 		{49313A84-CB4F-4D0F-A87F-9EE239C283EA}.Release|x86.ActiveCfg = Release|Any CPU
 		{49313A84-CB4F-4D0F-A87F-9EE239C283EA}.Release|x86.Build.0 = Release|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Debug|x64.Build.0 = Debug|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Debug|x86.Build.0 = Debug|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Release|ARM64.Build.0 = Release|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Release|x64.ActiveCfg = Release|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Release|x64.Build.0 = Release|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Release|x86.ActiveCfg = Release|Any CPU
+		{F010C9DA-FBB0-4525-A9AA-CD2E8EBE142E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
