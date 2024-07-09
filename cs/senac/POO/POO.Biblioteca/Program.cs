@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bibliotecaconsole;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -15,7 +16,7 @@ namespace POObiblioteca
 
             int codigo = 0;
 
-            int larguraTabela = 97;
+            Tabela tabela = new Tabela();
 
             List<Aluno> Alunos = new List<Aluno>();
             List<Autor> Autores = new List<Autor>();
@@ -66,15 +67,15 @@ namespace POObiblioteca
                                     break;
                                 case "2": //Listar alunos
                                     Console.Clear();
-                                    Linha();
-                                    Cabecalho("Código", "Nome", "Celular");
-                                    Linha();
+                                    tabela.Linha();
+                                    tabela.Cabecalho("Código", "Nome", "Celular");
+                                    tabela.Linha();
                                     foreach (Aluno alunos in Alunos)
                                     {
-                                        Linha();
-                                        Cabecalho($"{alunos.Codigo}", $"{alunos.Nome}", $"{alunos.Celular}");
+                                        tabela.Linha();
+                                        tabela.Cabecalho($"{alunos.Codigo}", $"{alunos.Nome}", $"{alunos.Celular}");
                                     }
-                                    Linha();
+                                    tabela.Linha();
                                     Console.Write("Pressione qualquer tecla para continuar. . . ");
 
                                     Console.ReadKey();
@@ -133,14 +134,14 @@ namespace POObiblioteca
                                 break;
                             case "2": //Listar autores
                                 Console.Clear();
-                                Linha();
-                                Cabecalho("Código", "Nome", "Email");
+                                tabela.Linha();
+                                tabela.Cabecalho("Código", "Nome", "Email");
                                 foreach (Autor autores in Autores)
                                 {
-                                    Linha();
-                                    Cabecalho($"{autores.Codigo}", $"{autores.Nome}", $"{autores.Email}");
+                                    tabela.Linha();
+                                    tabela.Cabecalho($"{autores.Codigo}", $"{autores.Nome}", $"{autores.Email}");
                                 }
-                                Linha();
+                                tabela.Linha();
                                 Console.Write("Pressione qualquer tecla para continuar. . . ");
                                 
                                 Console.ReadKey();
@@ -191,15 +192,15 @@ namespace POObiblioteca
                                 break;
                             case "2": //Listar editoras
                                 Console.Clear();
-                                Linha();
-                                Cabecalho("Código", "Nome", "Email");
-                                Linha();
+                                tabela.Linha();
+                                tabela.Cabecalho("Código", "Nome", "Email");
+                                tabela.Linha();
                                 foreach (Editora editoras in Editoras)
                                 {
-                                    Linha();
-                                    Cabecalho($"{editoras.Codigo}", $"{editoras.Nome}", $"{editoras.Email}");
+                                    tabela.Linha();
+                                    tabela.Cabecalho($"{editoras.Codigo}", $"{editoras.Nome}", $"{editoras.Email}");
                                 }
-                                Linha();
+                                tabela.Linha();
                                 Console.Write("Pressione qualquer tecla para continuar. . . ");
 
                                 Console.ReadKey();
@@ -252,15 +253,15 @@ namespace POObiblioteca
                                 break;
                             case "2": //Listar livros
                                 Console.Clear();
-                                Linha();
-                                Cabecalho("Código", "Título", "Autor");
-                                Linha();
+                                tabela.Linha();
+                                tabela.Cabecalho("Código", "Título", "Autor");
+                                tabela.Linha();
                                 foreach (Livro livros in Livros)
                                 {
-                                    Linha();
-                                    Cabecalho($"{livros.Codigo}", $"{livros.Titulo}", $"{livros.Autor}");
+                                    tabela.Linha();
+                                    tabela.Cabecalho($"{livros.Codigo}", $"{livros.Titulo}", $"{livros.Autor}");
                                 }
-                                Linha();
+                                tabela.Linha();
                                 Console.Write("Pressione qualquer tecla para continuar. . . ");
                                 
                                 Console.ReadKey();
@@ -307,7 +308,7 @@ namespace POObiblioteca
                                 List<Aluno> listaAluno = new List<Aluno>();
                                 
                                 Console.Clear();
-                                Cabecalho("Código", "Nome");
+                                tabela.Cabecalho("Código", "Nome");
                                 foreach (Aluno aluno in listaAluno)
                                 {
                                     Console.WriteLine($"{aluno.Codigo}", $"{aluno.Nome}");
@@ -338,38 +339,6 @@ namespace POObiblioteca
                 Console.Write("Pressione qualquer tecla para continuar. . . ");
 
                 Console.ReadKey();
-            }
-
-            //Métodos da tabela//
-            void Linha() //Inserir linha separadora
-            {
-                Console.WriteLine(new string('-', larguraTabela));
-            }
-            void Cabecalho(params string[] colunas) //Inserir uma linha com conteúdo
-            {
-                int largura = (larguraTabela - colunas.Length) / colunas.Length;
-                
-                string row = "|";
-                
-                foreach (string coluna in colunas)
-                {
-                    row += Centralizar(coluna, largura) + "|";
-                }
-                
-                Console.WriteLine(row);
-            }
-            string Centralizar(string texto, int largura)
-            {
-                texto = texto.Length > largura ? texto.Substring(0, largura - 3) + "..." : texto;
-
-                if (string.IsNullOrEmpty(texto))
-                {
-                    return new string(' ', largura);
-                }
-                else
-                {
-                    return texto.PadRight(largura - (largura - texto.Length) / 2).PadLeft(largura);
-                }
             }
         }
     }
