@@ -22,11 +22,11 @@ namespace POObiblioteca
 
             objemprestimo.Codigo = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Empréstimo: ");
+            Console.Write("Data do Empréstimo: ");
 
             objemprestimo.DataEmprestimo = Convert.ToDateTime(Console.ReadLine());
 
-            Console.Write("Devolução: ");
+            Console.Write("Data da Devolução: ");
 
             objemprestimo.DataDevolucao = Convert.ToDateTime(Console.ReadLine());
 

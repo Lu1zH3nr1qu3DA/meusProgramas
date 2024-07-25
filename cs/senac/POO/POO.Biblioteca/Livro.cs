@@ -48,7 +48,7 @@ namespace POObiblioteca
 
             objlivro.ISBN = Console.ReadLine();
 
-            Console.Write("Lançamento: ");
+            Console.Write("Data de Lançamento: ");
 
             objlivro.Lancamento = Convert.ToDateTime(Console.ReadLine());
         }

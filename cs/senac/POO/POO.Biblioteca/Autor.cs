@@ -25,7 +25,7 @@ namespace POObiblioteca
 
             objautor.Nome = Console.ReadLine();
 
-            Console.Write("Nascimento: ");
+            Console.Write("Data de Nascimento: ");
 
             objautor.Nascimento = Convert.ToDateTime(Console.ReadLine());
 

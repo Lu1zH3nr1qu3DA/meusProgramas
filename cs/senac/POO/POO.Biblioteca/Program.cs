@@ -64,6 +64,8 @@ namespace POObiblioteca
                                     objaluno.InserirDados(ref objaluno);
 
                                     Alunos.Add(objaluno);
+
+                                    Alunos = Alunos.OrderBy(aluno => aluno.Codigo).ToList();
                                     break;
                                 case "2": //Listar alunos
                                     Console.Clear();
@@ -91,6 +93,8 @@ namespace POObiblioteca
                                     objaluno = item;
 
                                     objaluno.InserirDados(ref objaluno);
+
+                                    Alunos = Alunos.OrderBy(aluno => aluno.Codigo).ToList();
                                     break;
                                 case "4": //Excluir aluno
                                     Console.Clear();
@@ -133,6 +137,8 @@ namespace POObiblioteca
                                 objautor.InserirAutor(ref objautor);
                                 
                                 Autores.Add(objautor);
+
+                                Autores = Autores.OrderBy(autor => autor.Codigo).ToList();
                                 break;
                             case "2": //Listar autores
                                 Console.Clear();
@@ -149,7 +155,7 @@ namespace POObiblioteca
                                 Console.ReadKey();
                                 break;
                             case "3": //Alterar autor
-                                Console.Write("Insira o Código do Aluno que deseja Alterar: ");
+                                Console.Write("Insira o Código do Autor que deseja Alterar: ");
                                 
                                 codigo = Convert.ToInt16(Console.ReadLine());
                                 
@@ -158,10 +164,12 @@ namespace POObiblioteca
                                 objautor = item;
                                 
                                 objautor.InserirAutor(ref objautor);
+
+                                Autores = Autores.OrderBy(autor => autor.Codigo).ToList();
                                 break;
                             case "4": //Excluir autor
                                 Console.Clear();
-                                Console.WriteLine("Informe o código para excluir: ");
+                                Console.WriteLine("Informe o Código do Autor que deseja Excluir: ");
                                 
                                 codigo = Convert.ToInt32(Console.ReadLine());
                                 
@@ -196,6 +204,8 @@ namespace POObiblioteca
                                 objeditora.InserirEditora(ref objeditora);
                                 
                                 Editoras.Add(objeditora);
+
+                                Editoras = Editoras.OrderBy(editora => editora.Codigo).ToList();
                                 break;
                             case "2": //Listar editoras
                                 Console.Clear();
@@ -213,7 +223,7 @@ namespace POObiblioteca
                                 Console.ReadKey();
                                 break;
                             case "3": //Alterar editora
-                                Console.Write("Insira o Código do Aluno que deseja Alterar: ");
+                                Console.Write("Insira o Código da Editora que deseja Alterar: ");
                                 
                                 codigo = Convert.ToInt16(Console.ReadLine());
                                 
@@ -224,10 +234,12 @@ namespace POObiblioteca
                                 objeditora = item;
                                 
                                 objeditora.InserirEditora(ref objeditora);
+
+                                Editoras = Editoras.OrderBy(editora => editora.Codigo).ToList();
                                 break;
                             case "4": //Excluir editora
                                 Console.Clear();
-                                Console.WriteLine("Informe o código para excluir: ");
+                                Console.WriteLine("Informe o Código da Editora que deseja Excluir: ");
                                 
                                 codigo = Convert.ToInt32(Console.ReadLine());
                                 
@@ -262,6 +274,8 @@ namespace POObiblioteca
                                 objlivro.InserirLivro(ref objlivro);
                                 
                                 Livros.Add(objlivro);
+
+                                Livros = Livros.OrderBy(livro => livro.Codigo).ToList();
                                 break;
                             case "2": //Listar livros
                                 Console.Clear();
@@ -288,10 +302,12 @@ namespace POObiblioteca
                                 objlivro = item;
                                 
                                 objlivro.InserirLivro(ref objlivro);
+
+                                Livros = Livros.OrderBy(livro => livro.Codigo).ToList();
                                 break;
                             case "4": //Excluir livro
                                 Console.Clear();
-                                Console.WriteLine("Informe o código para excluir: ");
+                                Console.WriteLine("Informe o Código para Excluir: ");
                                 
                                 codigo = Convert.ToInt32(Console.ReadLine());
                                 
@@ -352,7 +368,7 @@ namespace POObiblioteca
                         }
                         break;
                     case "6":
-                        Console.Write("Tem certeza que deseja sair? TODOS OS DADOS SERÃO PERDIDOS. Continuar? S/N ");
+                        Console.Write("Tem certeza que deseja sair? TODOS OS DADOS SERÃO PERDIDOS. Continuar? (S/N) ");
 
                         resposta = Console.ReadLine();
 
