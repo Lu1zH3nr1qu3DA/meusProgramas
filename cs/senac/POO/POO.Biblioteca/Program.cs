@@ -92,6 +92,7 @@ namespace POObiblioteca
 
                                     objaluno = item;
 
+                                    Console.WriteLine("Pressione <Enter> para manter os valores originais.");
                                     objaluno.InserirDados(ref objaluno);
 
                                     Alunos = Alunos.OrderBy(aluno => aluno.Codigo).ToList();
@@ -344,7 +345,7 @@ namespace POObiblioteca
                                 tabela.Cabecalho("Código", "Nome");
                                 foreach (Aluno aluno in listaAluno)
                                 {
-                                    Console.WriteLine($"{aluno.Codigo}", $"{aluno.Nome}");
+                                    tabela.Cabecalho($"{aluno.Codigo}", $"{aluno.Nome}");
                                 }
                                 objemprestimo.InserirEmprestimo(ref objemprestimo);
                                 

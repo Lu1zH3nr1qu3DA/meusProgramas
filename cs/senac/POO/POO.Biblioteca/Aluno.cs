@@ -18,7 +18,7 @@ namespace POObiblioteca
 
         public void InserirDados(ref Aluno objaluno)
         {
-            Console.WriteLine("Informe os dados:");
+            Console.WriteLine("Informe os dados.\n");
             Console.Write("Código: ");
 
             objaluno.Codigo = Convert.ToInt16(Console.ReadLine());
