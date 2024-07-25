@@ -21,27 +21,39 @@ namespace POObiblioteca
             Console.WriteLine("Informe os dados.\n");
             Console.Write("Código: ");
 
-            objaluno.Codigo = Convert.ToInt16(Console.ReadLine());
+            string dado = Console.ReadLine();
+
+            objaluno.Codigo = (dado == "") ? objaluno.Codigo : Convert.ToInt16(dado);
 
             Console.Write("Nome: ");
 
-            objaluno.Nome = Console.ReadLine();
+            dado = Console.ReadLine();
+
+            objaluno.Nome = (dado == "") ? objaluno.Nome : dado;
 
             Console.Write("Data de Nascimento: ");
 
-            objaluno.Nascimento = Convert.ToDateTime(Console.ReadLine());
+            dado = Console.ReadLine();
+
+            objaluno.Nascimento = (dado == "") ? objaluno.Nascimento : Convert.ToDateTime(dado);
 
             Console.Write("Endereço: ");
 
-            objaluno.Endereco = Console.ReadLine();
+            dado = Console.ReadLine();
+
+            objaluno.Endereco = (dado == "") ? objaluno.Endereco : dado;
 
             Console.Write("Número: ");
 
-            objaluno.Numero = Console.ReadLine();
+            dado = Console.ReadLine();
+
+            objaluno.Numero = (dado == "") ? objaluno.Numero : dado;
 
             Console.Write("Celular: ");
 
-            objaluno.Celular = Console.ReadLine();
+            dado = Console.ReadLine();
+
+            objaluno.Celular = (dado == "") ? objaluno.Celular : dado;
         }
     }
 }
