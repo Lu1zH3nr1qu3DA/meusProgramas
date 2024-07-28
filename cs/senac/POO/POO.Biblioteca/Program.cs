@@ -349,6 +349,7 @@ namespace POObiblioteca
                                 {
                                     tabela.Cabecalho($"{aluno.Codigo}", $"{aluno.Nome}");
                                 }
+
                                 objemprestimo.InserirEmprestimo(ref objemprestimo);
                                 
                                 Aluno objaluno = new Aluno();
@@ -357,28 +358,35 @@ namespace POObiblioteca
                                 
                                 objaluno.Codigo = Convert.ToInt32(Console.ReadLine());
 
-
                                 Console.WriteLine("\nInforme os dados do emprestimo a ser cadastrado:\n");
                                 Console.Write("Código do Empréstimo: ");
+                                
                                 objemprestimo.Codigo = Convert.ToInt32(Console.ReadLine());
 
                                 //calcula automaticamente a data do empréstimo -> igual a data atual do sistema
                                 objemprestimo.DataEmprestimo = DateTime.Today;
+                                
                                 Console.WriteLine("\nA data do empréstimo foi determinada automaticamente.");
                                 Console.WriteLine("Para concordar tecle <Enter>. Para alterar informe a nova data.");
                                 Console.Write("\nData do Empréstimo: " + objemprestimo.DataEmprestimo.ToString("dd/MM/yyyy") + " -> "); 
+                                
                                 string empNovaInf = Console.ReadLine();
+                                
                                 objemprestimo.DataEmprestimo = (empNovaInf != "") ? Convert.ToDateTime(empNovaInf) : objemprestimo.DataEmprestimo;
 
                                 //calcula automaticamente a data de devolução (30 dias após o empréstimo)
                                 objemprestimo.DataDevolucao = objemprestimo.DataEmprestimo.AddDays(30);
+                                
                                 Console.WriteLine("\nA data de devolução do empréstimo foi determinada automaticamente.");
                                 Console.WriteLine("Para concordar tecle <Enter>. Para alterar informe a nova data.");
                                 Console.Write("\nData da Devolução: " + objemprestimo.DataDevolucao.ToString("dd/MM/yyyy") + " -> ");
+                                
                                 empNovaInf = Console.ReadLine();
+                                
                                 objemprestimo.DataDevolucao = (empNovaInf != "") ? Convert.ToDateTime(empNovaInf) : objemprestimo.DataDevolucao;
 
                                 Console.Write("\nObservações do Empréstimo: ");
+                                
                                 objemprestimo.Observacoes = Console.ReadLine();
                                 break;
                             case "2": //Listar empréstimos
