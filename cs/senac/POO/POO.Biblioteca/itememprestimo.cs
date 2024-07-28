@@ -9,6 +9,6 @@ namespace POObiblioteca
     public class ItemEmprestimo
     {
         public int EmprestimoCodigo { get; set; }
-        public int LivroCodigo { get; set;}
+        public int LivroCodigo { get; set; }
     }
 }
