@@ -12,8 +12,8 @@ namespace POObiblioteca
         public DateTime DataEmprestimo { get; set; }
         public DateTime DataDevolucao { get; set; }
         public string Observacoes { get; set; }
-        public List<Aluno> alunos;
-        public List<Livro> livros;
+
+        public Aluno AlunoResponsavel { get; set; }
 
         public void InserirEmprestimo(ref Emprestimo objemprestimo)
         {

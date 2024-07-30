@@ -27,7 +27,15 @@ namespace POObiblioteca
 
             Console.Write("Data de Nascimento: ");
 
-            objautor.Nascimento = Convert.ToDateTime(Console.ReadLine());
+            try
+            {
+                objautor.Nascimento = Convert.ToDateTime(Console.ReadLine());
+            } 
+            catch (ArgumentOutOfRangeException erro)
+            {
+                Console.Clear();
+                Console.WriteLine(erro.Message);
+            }
 
             Console.Write("E-mail: ");
 

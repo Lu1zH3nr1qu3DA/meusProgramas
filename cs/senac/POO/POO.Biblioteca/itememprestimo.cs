@@ -10,5 +10,6 @@ namespace POObiblioteca
     {
         public int EmprestimoCodigo { get; set; }
         public int LivroCodigo { get; set;}
+        public List<Livro> LivrosEmprestados = new List<Livro>();
     }
 }

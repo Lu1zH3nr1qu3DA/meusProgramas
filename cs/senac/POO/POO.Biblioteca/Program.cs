@@ -10,18 +10,95 @@ namespace POObiblioteca
 {
     internal class Program
     {
+        //Variáveis
+        static string resposta = "";
+
+        static int codigo = 0;
+
+        //Objetos
+        static Tabela tabela = new Tabela();
+        static Aluno aluno = new Aluno();
+        static Autor autor = new Autor();
+        static Editora editora = new Editora();
+        static Livro livro = new Livro();
+        static Emprestimo emprestimo = new Emprestimo();
+        static ItemEmprestimo itemEmprestimo = new ItemEmprestimo();
+
+        //Listas
+        static List<Aluno> alunos = new List<Aluno>();
+        static List<Autor> autores = new List<Autor>();
+        static List<Editora> editoras = new List<Editora>();
+        static List<Livro> livros = new List<Livro>();
+        static List<Emprestimo> emprestimos = new List<Emprestimo>();
+        static List<ItemEmprestimo> itensEmprestimo = new List<ItemEmprestimo>();
+
+        //Funções
+        static void ListarAlunos()
+        {
+            tabela.Linha();
+            tabela.Cabecalho("Código", "Nome", "Nascimento", "Celular");
+            tabela.Linha();
+            foreach (Aluno alunos in alunos)
+            {
+                tabela.Linha();
+                tabela.Cabecalho($"{alunos.Codigo}", $"{alunos.Nome}", $"{alunos.Nascimento.Date}", $"{alunos.Celular}");
+            }
+            tabela.Linha();
+        }
+
+        static void ListarAutores()
+        {
+            tabela.Linha();
+            tabela.Cabecalho("Código", "Nome", "Email");
+            foreach (Autor autores in autores)
+            {
+                tabela.Linha();
+                tabela.Cabecalho($"{autores.Codigo}", $"{autores.Nome}", $"{autores.Email}");
+            }
+            tabela.Linha();
+        }
+
+        static void ListarEditoras()
+        {
+            tabela.Linha();
+            tabela.Cabecalho("Código", "Nome", "Email");
+            tabela.Linha();
+            foreach (Editora editoras in editoras)
+            {
+                tabela.Linha();
+                tabela.Cabecalho($"{editoras.Codigo}", $"{editoras.Nome}", $"{editoras.Email}");
+            }
+            tabela.Linha();
+        }
+
+        static void ListarLivros()
+        {
+            tabela.Linha();
+            tabela.Cabecalho("Código", "Título", "Autor");
+            tabela.Linha();
+            foreach (Livro livros in livros)
+            {
+                tabela.Linha();
+                tabela.Cabecalho($"{livros.Codigo}", $"{livros.Titulo}", $"{livros.Autor}");
+            }
+            tabela.Linha();
+        }
+
+        static void ListarEmprestimos()
+        {
+            tabela.Linha();
+            tabela.Cabecalho("Código", "Nome");
+            tabela.Linha();
+            foreach (Emprestimo emprestimo in emprestimos)
+            {
+                tabela.Linha();
+                tabela.Cabecalho($"{emprestimo.Codigo}", $"{emprestimo.Observacoes}");
+            }
+            tabela.Linha();
+        }
+
         static void Main(string[] args)
         {
-            string resposta = "";
-
-            int codigo = 0;
-
-            Tabela tabela = new Tabela();
-
-            List<Aluno> Alunos = new List<Aluno>();
-            List<Autor> Autores = new List<Autor>();
-            List<Editora> Editoras = new List<Editora>();
-            List<Livro> Livros = new List<Livro>();
 
             while (resposta != "9") //Menu principal
             {
@@ -58,26 +135,17 @@ namespace POObiblioteca
                             switch (resposta)
                             {
                                 case "1": //Cadastrar aluno
-                                    Aluno objaluno = new Aluno();
 
                                     Console.Clear();
-                                    objaluno.InserirDados(ref objaluno);
+                                    aluno.InserirDados(ref aluno);
 
-                                    Alunos.Add(objaluno);
+                                    alunos.Add(aluno);
 
-                                    Alunos = Alunos.OrderBy(aluno => aluno.Codigo).ToList();
+                                    alunos = alunos.OrderBy(aluno => aluno.Codigo).ToList();
                                     break;
                                 case "2": //Listar alunos
                                     Console.Clear();
-                                    tabela.Linha();
-                                    tabela.Cabecalho("Código", "Nome", "Celular");
-                                    tabela.Linha();
-                                    foreach (Aluno alunos in Alunos)
-                                    {
-                                        tabela.Linha();
-                                        tabela.Cabecalho($"{alunos.Codigo}", $"{alunos.Nome}", $"{alunos.Celular}");
-                                    }
-                                    tabela.Linha();
+                                    ListarAlunos();
                                     Console.Write("Pressione qualquer tecla para continuar. . . ");
 
                                     Console.ReadKey();
@@ -88,15 +156,15 @@ namespace POObiblioteca
 
                                     codigo = Convert.ToInt16(Console.ReadLine());
 
-                                    var item = Alunos.First(aluno => aluno.Codigo == codigo);
+                                    var item = alunos.First(aluno => aluno.Codigo == codigo);
 
-                                    objaluno = item;
+                                    aluno = item;
 
                                     Console.WriteLine("Para manter os valores originais, pressione <Enter>.");
 
-                                    objaluno.InserirDados(ref objaluno);
+                                    aluno.InserirDados(ref aluno);
 
-                                    Alunos = Alunos.OrderBy(aluno => aluno.Codigo).ToList();
+                                    alunos = alunos.OrderBy(aluno => aluno.Codigo).ToList();
                                     break;
                                 case "4": //Excluir aluno
                                     Console.Clear();
@@ -104,7 +172,7 @@ namespace POObiblioteca
 
                                     codigo = Convert.ToInt32(Console.ReadLine());
 
-                                    Alunos.RemoveAll(delegate (Aluno f) { return f.Codigo == codigo; });
+                                    alunos.RemoveAll(delegate (Aluno f) { return f.Codigo == codigo; });
                                     break;
                                 case "5":
                                     break;
@@ -133,25 +201,16 @@ namespace POObiblioteca
                         switch (resposta)
                         {
                             case "1": //Cadastrar autor
-                                Autor objautor = new Autor();
-
                                 Console.Clear();
-                                objautor.InserirAutor(ref objautor);
+                                autor.InserirAutor(ref autor);
                                 
-                                Autores.Add(objautor);
+                                autores.Add(autor);
 
-                                Autores = Autores.OrderBy(autor => autor.Codigo).ToList();
+                                autores = autores.OrderBy(obj => obj.Codigo).ToList();
                                 break;
                             case "2": //Listar autores
                                 Console.Clear();
-                                tabela.Linha();
-                                tabela.Cabecalho("Código", "Nome", "Email");
-                                foreach (Autor autores in Autores)
-                                {
-                                    tabela.Linha();
-                                    tabela.Cabecalho($"{autores.Codigo}", $"{autores.Nome}", $"{autores.Email}");
-                                }
-                                tabela.Linha();
+                                ListarAutores();
                                 Console.Write("Pressione qualquer tecla para continuar. . . ");
                                 
                                 Console.ReadKey();
@@ -161,13 +220,13 @@ namespace POObiblioteca
                                 
                                 codigo = Convert.ToInt16(Console.ReadLine());
                                 
-                                var item = Autores.First(autor => autor.Codigo == codigo);
+                                var item = autores.First(obj => obj.Codigo == codigo);
                                 
-                                objautor = item;
+                                autor = item;
                                 
-                                objautor.InserirAutor(ref objautor);
+                                autor.InserirAutor(ref autor);
 
-                                Autores = Autores.OrderBy(autor => autor.Codigo).ToList();
+                                autores = autores.OrderBy(obj => obj.Codigo).ToList();
                                 break;
                             case "4": //Excluir autor
                                 Console.Clear();
@@ -175,7 +234,7 @@ namespace POObiblioteca
                                 
                                 codigo = Convert.ToInt32(Console.ReadLine());
                                 
-                                Autores.RemoveAll(delegate (Autor f) { return f.Codigo == codigo; });
+                                autores.RemoveAll(delegate (Autor f) { return f.Codigo == codigo; });
                                 break;
                             case "5":
                                 break;
@@ -205,21 +264,13 @@ namespace POObiblioteca
                                 Console.Clear();
                                 objeditora.InserirEditora(ref objeditora);
                                 
-                                Editoras.Add(objeditora);
+                                editoras.Add(objeditora);
 
-                                Editoras = Editoras.OrderBy(editora => editora.Codigo).ToList();
+                                editoras = editoras.OrderBy(editora => editora.Codigo).ToList();
                                 break;
                             case "2": //Listar editoras
                                 Console.Clear();
-                                tabela.Linha();
-                                tabela.Cabecalho("Código", "Nome", "Email");
-                                tabela.Linha();
-                                foreach (Editora editoras in Editoras)
-                                {
-                                    tabela.Linha();
-                                    tabela.Cabecalho($"{editoras.Codigo}", $"{editoras.Nome}", $"{editoras.Email}");
-                                }
-                                tabela.Linha();
+                                ListarEditoras();
                                 Console.Write("Pressione qualquer tecla para continuar. . . ");
 
                                 Console.ReadKey();
@@ -229,7 +280,7 @@ namespace POObiblioteca
                                 
                                 codigo = Convert.ToInt16(Console.ReadLine());
                                 
-                                var item = Editoras.First(editora => editora.Codigo == codigo);
+                                var item = editoras.First(editora => editora.Codigo == codigo);
                                 
                                 objeditora = new Editora();
                                 
@@ -237,7 +288,7 @@ namespace POObiblioteca
                                 
                                 objeditora.InserirEditora(ref objeditora);
 
-                                Editoras = Editoras.OrderBy(editora => editora.Codigo).ToList();
+                                editoras = editoras.OrderBy(editora => editora.Codigo).ToList();
                                 break;
                             case "4": //Excluir editora
                                 Console.Clear();
@@ -245,7 +296,7 @@ namespace POObiblioteca
                                 
                                 codigo = Convert.ToInt32(Console.ReadLine());
                                 
-                                Editoras.RemoveAll(delegate (Editora f) { return f.Codigo == codigo; });
+                                editoras.RemoveAll(delegate (Editora f) { return f.Codigo == codigo; });
                                 break;
                             case "5":
                                 break;
@@ -275,21 +326,13 @@ namespace POObiblioteca
                                 Console.Clear();
                                 objlivro.InserirLivro(ref objlivro);
                                 
-                                Livros.Add(objlivro);
+                                livros.Add(objlivro);
 
-                                Livros = Livros.OrderBy(livro => livro.Codigo).ToList();
+                                livros = livros.OrderBy(livro => livro.Codigo).ToList();
                                 break;
                             case "2": //Listar livros
                                 Console.Clear();
-                                tabela.Linha();
-                                tabela.Cabecalho("Código", "Título", "Autor");
-                                tabela.Linha();
-                                foreach (Livro livros in Livros)
-                                {
-                                    tabela.Linha();
-                                    tabela.Cabecalho($"{livros.Codigo}", $"{livros.Titulo}", $"{livros.Autor}");
-                                }
-                                tabela.Linha();
+                                ListarLivros();
                                 Console.Write("Pressione qualquer tecla para continuar. . . ");
                                 
                                 Console.ReadKey();
@@ -299,13 +342,13 @@ namespace POObiblioteca
                                 
                                 codigo = Convert.ToInt16(Console.ReadLine());
                                 
-                                var item = Livros.First(livro => livro.Codigo == codigo);
+                                var item = livros.First(livro => livro.Codigo == codigo);
                                 
                                 objlivro = item;
                                 
                                 objlivro.InserirLivro(ref objlivro);
 
-                                Livros = Livros.OrderBy(livro => livro.Codigo).ToList();
+                                livros = livros.OrderBy(livro => livro.Codigo).ToList();
                                 break;
                             case "4": //Excluir livro
                                 Console.Clear();
@@ -313,7 +356,7 @@ namespace POObiblioteca
                                 
                                 codigo = Convert.ToInt32(Console.ReadLine());
                                 
-                                Livros.RemoveAll(delegate (Livro f) { return f.Codigo == codigo; });
+                                livros.RemoveAll(delegate (Livro f) { return f.Codigo == codigo; });
                                 break;
                             case "5":
                                 break;
@@ -338,35 +381,34 @@ namespace POObiblioteca
 
                         switch (resposta)
                         {
-                            case "1": //Menu registrar empréstimo
-                                Emprestimo objemprestimo = new Emprestimo();
-                                
-                                List<Aluno> listaAluno = new List<Aluno>();
-                                
-                                Console.Clear();
-                                tabela.Cabecalho("Código", "Nome");
-                                foreach (Aluno aluno in listaAluno)
-                                {
-                                    tabela.Cabecalho($"{aluno.Codigo}", $"{aluno.Nome}");
-                                }
-                                objemprestimo.InserirEmprestimo(ref objemprestimo);
-                                
-                                Aluno objaluno = new Aluno();
-                                
-                                Console.Write("Informar o código do aluno: ");
-                                
-                                objaluno.Codigo = Convert.ToInt32(Console.ReadLine());
 
+                            //Menu registrar empréstimo
+
+                            case "1":
+                                Emprestimo objemprestimo = new Emprestimo();
+
+                                List<Aluno> listaAluno = new List<Aluno>();
+
+                                Console.Clear();
+                                ListarAlunos();
+                                objemprestimo.InserirEmprestimo(ref objemprestimo);
+
+                                Aluno objaluno = new Aluno();
+
+                                Console.Write("Informe o código do aluno que deseja realizar um empréstimo: ");
+
+                                objaluno.Codigo = Convert.ToInt32(Console.ReadLine());
 
                                 Console.WriteLine("\nInforme os dados do emprestimo a ser cadastrado:\n");
                                 Console.Write("Código do Empréstimo: ");
                                 objemprestimo.Codigo = Convert.ToInt32(Console.ReadLine());
 
                                 //calcula automaticamente a data do empréstimo -> igual a data atual do sistema
+
                                 objemprestimo.DataEmprestimo = DateTime.Today;
                                 Console.WriteLine("\nA data do empréstimo foi determinada automaticamente.");
                                 Console.WriteLine("Para concordar tecle <Enter>. Para alterar informe a nova data.");
-                                Console.Write("\nData do Empréstimo: " + objemprestimo.DataEmprestimo.ToString("dd/MM/yyyy") + " -> "); 
+                                Console.Write("\nData do Empréstimo: " + objemprestimo.DataEmprestimo.ToString("dd/MM/yyyy") + " -> ");
                                 string empNovaInf = Console.ReadLine();
                                 objemprestimo.DataEmprestimo = (empNovaInf != "") ? Convert.ToDateTime(empNovaInf) : objemprestimo.DataEmprestimo;
 
@@ -380,10 +422,43 @@ namespace POObiblioteca
 
                                 Console.Write("\nObservações do Empréstimo: ");
                                 objemprestimo.Observacoes = Console.ReadLine();
+
+
                                 break;
                             case "2": //Listar empréstimos
+                                Console.Clear();
+                                //lista os emprestimos cadastrados
+                                Console.WriteLine("Empréstimos:\n");
+                                //listagem dos emprestimos (cabecalho)
+                                tabela.Linha();
+                                tabela.Cabecalho("Aluno", "Empréstimo Nº", "Data", "Devolução", "Observações");
+                                tabela.Linha();
+                                Int32 empNro = 0; Int32 empNroItem = 0;
+                                foreach (Emprestimo emprestimo in emprestimos)
+                                {
+                                    tabela.Linha();
+                                    empNro = emprestimo.Codigo;
+                                    //listagem dos emprestimos (conteúdo)
+
+                                    tabela.Cabecalho($"{emprestimo.AlunoResponsavel}", $"{emprestimo.Codigo}", $"{emprestimo.DataEmprestimo.Date}", $"{emprestimo.DataDevolucao.Date}", $"{emprestimo.Observacoes}");
+                                    tabela.Linha();
+                                    tabela.Cabecalho("Livro", "Titulo", "Autor");
+                                    foreach (ItemEmprestimo itemDoEmprestimo in itensEmprestimo)
+                                    {
+                                        empNroItem = itemDoEmprestimo.EmprestimoCodigo;
+                                        foreach (Livro livroEmprestado in itemDoEmprestimo.LivrosEmprestados)
+                                        {
+                                            if (empNroItem == empNro)
+                                            {
+                                                tabela.Cabecalho($"{livroEmprestado.Codigo}", $"{livroEmprestado.Titulo}", $"{livroEmprestado.Autor}");
+                                                tabela.Linha();
+                                            }
+                                        }
+                                    }
+                                }
                                 break;
                             case "3": //Alterar empréstimo
+
                                 break;
                             case "4": //Excluir empréstimo
                                 break;
@@ -399,9 +474,9 @@ namespace POObiblioteca
                     case "6":
                         Console.Write("Tem certeza que deseja sair? TODOS OS DADOS SERÃO PERDIDOS. Continuar? (S/N) ");
 
-                        resposta = Console.ReadLine();
+                        resposta = Console.ReadLine().ToUpper();
 
-                        if (resposta == "S" || resposta == "s" || resposta == "Y" || resposta == "y")
+                        if (resposta == "S" || resposta == "Y")
                         {
                            return;
                         }

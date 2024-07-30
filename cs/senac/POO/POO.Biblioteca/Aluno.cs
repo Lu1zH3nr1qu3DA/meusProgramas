@@ -16,6 +16,8 @@ namespace POObiblioteca
         public string Numero { get; set; }
         public string Celular { get; set; }
 
+
+
         public void InserirDados(ref Aluno objaluno)
         {
             Console.WriteLine("Informe os dados.\n");
