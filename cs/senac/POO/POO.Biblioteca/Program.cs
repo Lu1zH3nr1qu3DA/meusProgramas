@@ -10,18 +10,28 @@ namespace POObiblioteca
 {
     internal class Program
     {
+        static string resposta = "";
+
+        static Tabela tabela = new Tabela();
+        static Aluno objaluno = new Aluno();
+        static Autor objautor = new Autor();
+        static Editora objeditora = new Editora();
+        static Livro objlivro = new Livro();
+        static Emprestimo objemprestimo = new Emprestimo();
+        static ItemEmprestimo objitememprestimo = new ItemEmprestimo();
+
+        static List<Aluno> Alunos = new List<Aluno>();
+        static List<Autor> Autores = new List<Autor>();
+        static List<Editora> Editoras = new List<Editora>();
+        static List<Livro> Livros = new List<Livro>();
+        static List<Emprestimo> Emprestimos = new List<Emprestimo>();
+        static List<ItemEmprestimo> ItensEmprestimos = new List<ItemEmprestimo>();
+
+
+
         static void Main(string[] args)
         {
-            string resposta = "";
-
             int codigo = 0;
-
-            Tabela tabela = new Tabela();
-
-            List<Aluno> Alunos = new List<Aluno>();
-            List<Autor> Autores = new List<Autor>();
-            List<Editora> Editoras = new List<Editora>();
-            List<Livro> Livros = new List<Livro>();
 
             while (resposta != "9") //Menu principal
             {
@@ -58,8 +68,6 @@ namespace POObiblioteca
                             switch (resposta)
                             {
                                 case "1": //Cadastrar aluno
-                                    Aluno objaluno = new Aluno();
-
                                     Console.Clear();
                                     objaluno.InserirDados(ref objaluno);
 
@@ -133,8 +141,6 @@ namespace POObiblioteca
                         switch (resposta)
                         {
                             case "1": //Cadastrar autor
-                                Autor objautor = new Autor();
-
                                 Console.Clear();
                                 objautor.InserirAutor(ref objautor);
                                 
@@ -200,8 +206,6 @@ namespace POObiblioteca
                         switch (resposta)
                         {
                             case "1": //Cadastrar editora
-                                Editora objeditora = new Editora();
-                        
                                 Console.Clear();
                                 objeditora.InserirEditora(ref objeditora);
                                 
@@ -270,8 +274,6 @@ namespace POObiblioteca
                         switch (resposta)
                         {
                             case "1": //Cadastrar livro
-                                Livro objlivro = new Livro();
-                                
                                 Console.Clear();
                                 objlivro.InserirLivro(ref objlivro);
                                 
@@ -338,21 +340,15 @@ namespace POObiblioteca
 
                         switch (resposta)
                         {
-                            case "1": //Menu registrar empréstimo
-                                Emprestimo objemprestimo = new Emprestimo();
-                                
-                                List<Aluno> listaAluno = new List<Aluno>();
-                                
+                            case "1": //Menu registrar empréstimo                                
                                 Console.Clear();
                                 tabela.Cabecalho("Código", "Nome");
-                                foreach (Aluno aluno in listaAluno)
+                                foreach (Aluno aluno in Alunos)
                                 {
                                     tabela.Cabecalho($"{aluno.Codigo}", $"{aluno.Nome}");
                                 }
 
                                 objemprestimo.InserirEmprestimo(ref objemprestimo);
-                                
-                                Aluno objaluno = new Aluno();
                                 
                                 Console.Write("Informar o código do aluno: ");
                                 
